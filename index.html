@@ -1,394 +1,534 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Michail</title>
-    <!-- ======== ICONS ========= -->
-    <link rel="shortcut icon" href="assets/portfolio.png" type="image/x-icon">
+<html lang="en" class="no-js">
 
-    <!-- ======== UNICONS ======== -->
-    <link rel="stylesheet" href="">
+<head>
 
-    <!-- ======== MAIN CSS ========= -->
-    <link rel="stylesheet" href="style.css" />
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michail</title>
 
-    <!-- ======== RESPONSIVE CSS ======== -->
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
-  </head>
-  <body>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-    <!-- ============= NAVBAR ============ -->
-    <nav id="desktop-nav">
-      <div class="logo">Michail</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#experience">Pengalaman</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Icon-M.png">
+    <link rel="manifest" href="site.webmanifest">
 
-    <!-- ============= MAIN =========== -->
-    <nav id="hamburger-nav">
-      <div class="logo">Michail</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+</head>
 
-    <!-- Profil -->
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="https://thumbs2.imgbox.com/4e/ad/rE4FwaZD_t.png" alt="Michail profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hallo, Saya</p>
-        <h1 class="title">Michail</h1>
-        <p class="section__text__p2">Fullstack Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Michail - CV.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/web.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="window.open('https://sites.google.com/mahasiswa.undira.ac.id/michail/')"
-          />
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="window.open('https://www.linkedin.com/in/michailtj39/')"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="window.open('https://github.com/michailtjhang')"
-          />
-        </div>
-      </div>
-    </section>
 
-    <!-- Tentang Saya -->
+<body id="top">
 
-    <section id="about">
-      <p class="section__text__p1">Mengenal Lebih Jauh</p>
-      <h1 class="title">Tentang Saya</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="https://thumbs2.imgbox.com/df/71/nSuAr1ew_t.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Pengalaman</h3>
-              <p>1 tahun <br />Fullstack Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Pendidikan</h3>
-              <p>Semester 7<br/>Teknik Informatika</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Mahasiswa Jurusan Teknik Informatika di Universitas Dian Nusantara dengan IPK 3.91. Selama kuliah, saya mengikuti organisasi di luar kampus sebagai Head
-              Leader Multimedia di Abbalove Youth KBC yang bertanggung jawab untuk mengelola tim. Hal tesebut
-              menjadikan saya pribadi yang terorganisir dan rapih. Saya juga mengulik tools multimedia seperti
-              Propresenter, EasyWorship, dan OBS Studio.  
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
-    </section>
 
-    <!-- Pengalaman -->
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="line"></div>
+    </div>
 
-    <section id="experience">
-      <p class="section__text__p1">Jelajahi</p>
-      <h1 class="title">Pengalaman Saya</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend & Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tailwind CSS</h3>
-                  <p>Experienced</p>
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header id="masthead" class="s-header">
+
+            <div class="s-header__block">
+                <div class="s-header__branding">
+                    <p class="site-title">
+                        <a href="index.html" rel="home">Michail</a>
+                    </p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GIT & Bash</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>UI/UX</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Restful API</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL, SQLite, PostgreSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Fremework Laravel</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title" id="experience-sub-title-2">Language Programming</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Go</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++ & Java</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
-    </section>
 
-    <!-- Projek -->
-    <section id="projects">
-      <p class="section__text__p1">Telusuri</p>
-      <h1 class="title">Project Saya</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/TrackMyShipment.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">TrackMyShipment</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/michailtjhang/TrackMyShipment')"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Botolku.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Recycling: Botolku</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://medium.com/@michailaja/aplikasi-recycling-botolku-f87710ddbeaf')"
-              >
-                Medium
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/DonasiKita.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">DonasiKita</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/michailtjhang/DonasiKita')"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
-    </section>
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div> <!-- end s-header__block -->
 
-    <!-- Kontak -->
-    <section id="contact">
-      <p class="section__text__p1">Hubungi</p>
-      <h1 class="title">Kontak Saya</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:michailaja@gmail.com">Michailaja@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/michailtj39/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
+            <div class="row s-header__nav-wrap">
 
-    <!-- ============== FOOTER =========== -->
-    <footer>
-      <div id="copyright">
-        <div class="wrapper">
-          <p>Copyright &copy; 2023, <b>Michail</b> All Rights Reserved</p>
-        </div>
-      </div>
-    </footer>
+                <nav class="s-header__nav">
+                    <ul>
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#works" class="smoothscroll">Works</a></li>
+                        <li><a href="#colophon" class="smoothscroll">Contact</a></li>
+                    </ul>
+                </nav> <!-- end s-header__nav -->
 
-    <!-- ============== MAIN JS ============== -->
-    <script src="script.js"></script>
-  </body>
+                <ul class="s-header__social">
+                    <li>
+                        <a href="https://www.facebook.com/michail.tjhang/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                <path
+                                    d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z">
+                                </path>
+                            </svg>
+                            <span class="u-screen-reader-text">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/michailtj39" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                <path
+                                    d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z">
+                                </path>
+                            </svg>
+                            <span class="u-screen-reader-text">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/michailtjhang" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z">
+                                </path>
+                            </svg>
+                            <span class="u-screen-reader-text">Github</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/michail.kx/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                style="fill:rgba(75, 0, 130, 1);transform:;-ms-filter:">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                            <span class="u-screen-reader-text">Instagram</span>
+                        </a>
+                    </li>
+                </ul> <!-- end s-header__social -->
+
+            </div> <!-- end s-header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- intro
+        ================================================== -->
+        <section id="intro" class="s-intro">
+
+            <div class="row">
+                <div class="column lg-12 s-intro__content">
+
+                    <div class="s-intro__text">
+                        <h1 class="s-intro__text-huge animate-on-load">
+                            Michail
+                        </h1>
+                        <h3 class="animate-on-load">Full-Stack Web Developer</h3>
+                    </div>
+
+                    <div class="s-intro__bg"></div>
+
+                </div>
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- about
+        ================================================== -->
+        <section id="about" class="s-about">
+
+
+            <div class="s-about__block s-about__intro">
+
+                <div class="row">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle animate-on-load">About Me</h2>
+
+                        <p class="attention-getter animate-on-load">
+                            Organized and solutions-oriented Informatics Engineering graduate (3.89 GPA) from Dian
+                            Nusantara University, seeking a Full-stack Developer role. A BNSP-certified Junior Web 
+                            Developer with internship-proven skills in PHP (Laravel), SQL (MySQL, PostgreSQL), and 
+                            Docker. Eager to apply strong problem-solving abilities in a challenging development 
+                            environment.
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end s-about__intro -->
+
+
+            <div class="s-about__block s-about__career">
+
+                <div class="row s-about__career-header">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">Professional Background</h2>
+
+                        <p class="text-huge-title">
+                            My educational journey, industry experience, and technical expertise.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row s-about__timeline" data-animate-block>
+                    <div class="column lg-6 stack-on-900 s-about__timeline-section" data-animate-el>
+
+                        <h2 class="text-subtitle">
+                            Professional Experience
+                        </h2>
+
+                        <div class="timeline">
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">TransTRACK</h4>
+                                    <h5 class="timeline__meta">Full-Stack Developer Intern</h5>
+                                    <p class="timeline__timeframe">April 2024 - October 2024</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <ul>
+                                        <li>Architected and developed comprehensive monitoring and publishing tools for
+                                            the marketing division, seamlessly integrating with major social media
+                                            platforms including Instagram, Facebook, and LinkedIn.</li>
+                                        <li>Engineered robust server-side solutions using Laravel framework, implemented
+                                            responsive user interfaces with Tailwind CSS, and optimized MySQL database
+                                            performance. Successfully deployed applications while maintaining 99% uptime
+                                            and continuously improving system performance through code optimization and
+                                            monitoring.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">BTPN Syariah x Rakamin Academy</h4>
+                                    <h5 class="timeline__meta">Project-Based Virtual Intern: Full-Stack Developer</h5>
+                                    <p class="timeline__timeframe">February 2024 - March 2024</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <ul>
+                                        <li>Developed and maintained scalable web applications using Golang and MySQL,
+                                            focusing on clean architecture and efficient data management.</li>
+                                        <li>Designed and implemented RESTful APIs following industry best practices,
+                                            managed complex server-side logic, and ensured seamless deployment
+                                            processes. Consistently delivered optimized solutions while expanding
+                                            expertise in modern web development technologies.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div> <!-- end timeline -->
+
+                    </div> <!-- end s-about__timeline-section -->
+
+                    <div class="column lg-6 stack-on-900 s-about__timeline-section" data-animate-el>
+
+                        <h2 class="text-subtitle">
+                            Education
+                        </h2>
+
+                        <div class="timeline">
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Dian Nusantara University</h4>
+                                    <h5 class="timeline__meta">Bachelor's Degree in Informatics Engineering</h5>
+                                    <p class="timeline__timeframe">2021 - Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Currently pursuing a comprehensive degree in Informatics Engineering with a focus
+                                        on software development, database systems, and web technologies. Maintaining an
+                                        exceptional academic record with a GPA of 3.88 while actively participating in
+                                        practical projects and leadership roles. The curriculum encompasses advanced
+                                        programming concepts, system analysis and design, database management, and
+                                        emerging technologies in the field of computer science.</p>
+                                </div>
+                            </div>
+
+                        </div> <!-- end timeline -->
+
+                    </div> <!-- end s-about__timeline-section -->
+
+                </div> <!-- end about__timeline -->
+
+                <div class="row s-about__skills" data-animate-block>
+                    <div class="column lg-12" data-animate-el>
+
+                        <h2 class="text-subtitle">
+                            Technical Skills & Expertise
+                        </h2>
+
+                        <ul class="skill-bars">
+                            <li>
+                                <strong>Frontend Development: Tailwind CSS, Vue.js, Responsive Design</strong>
+                            </li>
+                            <li>
+                                <strong>Database Management: MySQL, SQLite, PostgreSQL</strong>
+                            </li>
+                            <li>
+                                <strong>Backend Development: PHP (Laravel Framework), RESTful APIs</strong>
+                            </li>
+                            <li>
+                                <strong>Programming Languages: JavaScript, PHP, Golang</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div> <!-- end s-about__skills -->
+
+                <div class="row s-about__clients" data-animate-block>
+                    <div class="column lg-12" data-animate-el>
+
+                        <h2 class="text-pretitle">Trusted Partners</h2>
+
+                        <ul class="clients-list text-huge-title">
+                            <li><a href="https://www.transtrack.co/id">TransTRACK</a></li>
+                            <li><a href="https://maxy.academy/">Maxy Academy</a></li>
+                            <li><a href="https://reguler.undira.ac.id/">Dian Nusantara University</a></li>
+                        </ul>
+
+                    </div>
+                </div> <!-- end s-about__clients-->
+
+            </div> <!-- end s-about__career -->
+
+        </section> <!-- end s-about -->
+
+
+        <!-- # works
+        ================================================== -->
+        <section id="works" class="s-works">
+
+            <div class="row">
+                <div class="column lg-12">
+                    <h2 class="text-pretitle">Featured Projects</h2>
+
+                    <p class="text-huge-title">
+                        Showcasing innovative solutions and technical excellence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row folio-list block-lg-one-half block-stack-on-550" data-animate-block>
+
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/78/47/Ah3y4GVX_t.png"
+                                Title="TrackMyShipment: Advanced Shipment Tracking Solution" data-size="1050x700">
+                                <img src="https://thumbs2.imgbox.com/78/47/Ah3y4GVX_t.png" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                                <span class="cat">Full-Stack Application</span>
+                                <a href="https://github.com/michailtjhang/TrackMyShipment" title="Project Repository"
+                                    class="project-link">View Project</a>
+                            </div>
+                            <h4 class="folio-item__title">TrackMyShipment: Advanced Shipment Tracking Solution</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>A comprehensive shipment tracking application that enables real-time package monitoring
+                                and status updates. This solution enhances transparency in the logistics process,
+                                providing customers with detailed tracking information and improving overall user
+                                experience through intuitive design and reliable performance.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/02/08/gCOvY0J5_t.png"
+                                title="DonasiKita: Comprehensive Charity Management Platform" data-size="1050x700">
+                                <img src="https://thumbs2.imgbox.com/02/08/gCOvY0J5_t.png" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                                <span class="cat">Social Impact Platform</span>
+                                <a href="https://github.com/michailtjhang/DonasiKita" title="Project Repository"
+                                    class="project-link">View Project</a>
+                            </div>
+                            <h4 class="folio-item__title">DonasiKita: Comprehensive Charity Management Platform</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>An innovative charity management platform that streamlines donation processes and
+                                facilitates meaningful connections between donors and beneficiaries. The application
+                                features secure payment processing, campaign management tools, and transparent fund
+                                tracking to build trust and maximize social impact.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg"
+                                title="TransTRACK Marketing Dashboard: Social Media Management Suite"
+                                data-size="1050x700">
+                                <img src="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                                <span class="cat">Enterprise Solution</span>
+                                <a href="https://dashboard-marketing.transtrack.id/" title="Live Application"
+                                    class="project-link">View Live</a>
+                            </div>
+                            <h4 class="folio-item__title">TransTRACK Marketing Dashboard</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>A sophisticated social media management suite designed for enterprise-level marketing
+                                operations. The platform provides comprehensive monitoring and management capabilities
+                                for Instagram, Facebook, TikTok, and other social platforms. Features include advanced
+                                analytics, automated content scheduling, performance tracking, and integrated publishing
+                                workflows that optimize social media presence and engagement for businesses and
+                                organizations.</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+
+            </div> <!-- folio-list -->
+
+        </section> <!-- end s-works -->
+
+
+        <!-- # site footer
+        ================================================== -->
+        <footer id="colophon" class="s-footer">
+
+            <div class="row s-footer__contact-header">
+                <div class="column lg-12">
+                    <h2 class="text-pretitle">Let's Connect</h2>
+
+                    <p class="text-huge-title">
+                        Ready to collaborate on your next project or discuss innovative solutions?
+                    </p>
+                </div>
+            </div> <!-- end s-footer__content -->
+
+            <div class="row s-footer__contact-content">
+
+                <div class="column lg-5 md-6 stack-on-900 left-block">
+                    <p>
+                        I'm passionate about creating impactful digital solutions and building meaningful professional
+                        relationships. Whether you're looking for a dedicated full-stack developer for your team,
+                        seeking consultation on a technical project, or simply want to connect with a fellow developer,
+                        I'd love to hear from you. Let's explore how we can work together to bring your ideas to life.
+
+                    <div class="s-footer__buttons">
+                        <a href="mailto:michailaja@gmail.com" class="btn btn--primary u-fullwidth">Start a
+                            Conversation</a>
+                        <a href="https://michailtjhang.github.io/assets/Michail%20-%20CV.pdf" target="_blank"
+                            class="btn btn--stroke u-fullwidth">Download Resume</a>
+                    </div>
+
+                    </p>
+                </div>
+
+                <div class="column lg-4 md-5 stack-on-900 right-block">
+
+                    <div class="s-footer__contact-info">
+                        <h2 class="text-subtitle">
+                            Professional Inquiries
+                        </h2>
+                        <ul class="link-list">
+                            <li><a href="mailto:michailaja@gmail.com">michailaja@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="s-footer__social">
+                        <h2 class="text-subtitle">
+                            Connect & Follow
+                        </h2>
+                        <ul class="link-list">
+                            <li><a href="https://www.facebook.com/michail.tjhang/">Facebook</a></li>
+                            <li><a href="https://x.com/michailtj39">Twitter</a></li>
+                            <li><a href="https://github.com/michailtjhang">GitHub</a></li>
+                            <li><a href="https://www.instagram.com/michail.kx/">Instagram</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div> <!-- end s-footer__contact-content -->
+
+            <div class="row s-footer__bottom">
+                <div class="column ss-copyright">
+                    <span>© Copyright Michail 2025</span>
+                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            <path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div> <!-- end s-footer__bottom-->
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end s-pagewrap -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
