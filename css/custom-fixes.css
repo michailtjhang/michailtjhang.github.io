@@ -1,0 +1,14 @@
+/* Custom CSS Fixes for Project Thumbnails */
+
+/* Fix thumbnail aspect ratio to display landscape images properly (16:9) */
+.folio-item__thumb a {
+    aspect-ratio: 16 / 9 !important;
+    display: block;
+}
+
+.folio-item__thumb img {
+    aspect-ratio: 16 / 9 !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
