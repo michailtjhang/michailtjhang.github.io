@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom-fixes.css">
+    <link rel="stylesheet" href="css/theme-enhancements.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <!-- favicons
     ================================================== -->
@@ -69,11 +71,18 @@
                     </ul>
                 </nav> <!-- end s-header__nav -->
 
+                <!-- Dark Mode Toggle moved here -->
+                <div class="theme-toggle" title="Toggle Dark Mode">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
+                    <div class="theme-toggle__switch"></div>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
+                </div>
+
                 <ul class="s-header__social">
                     <li>
                         <a href="https://www.facebook.com/michail.tjhang/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                style="fill:rgba(0, 0, 0, 1);">
                                 <path
                                     d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z">
                                 </path>
@@ -84,7 +93,7 @@
                     <li>
                         <a href="https://x.com/michailtj39" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                style="fill:rgba(0, 0, 0, 1);">
                                 <path
                                     d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z">
                                 </path>
@@ -95,7 +104,7 @@
                     <li>
                         <a href="https://github.com/michailtjhang" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                style="fill: rgba(0, 0, 0, 1);">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z">
                                 </path>
@@ -106,7 +115,7 @@
                     <li>
                         <a href="https://www.instagram.com/michail.kx/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                style="fill:rgba(75, 0, 130, 1);transform:;-ms-filter:">
+                                style="fill:rgba(75, 0, 130, 1);">
                                 <path
                                     d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                             </svg>
@@ -128,10 +137,29 @@
                 <div class="column lg-12 s-intro__content">
 
                     <div class="s-intro__text">
-                        <h1 class="s-intro__text-huge animate-on-load">
+                        <h1 class="s-intro__text-huge animate-on-load gradient-text">
                             Michail
                         </h1>
-                        <h3 class="animate-on-load">Full-Stack Web Developer</h3>
+                        <h3 class="animate-on-load typing-text"
+                            data-text="Full-Stack Web Developer | Laravel | React | Docker">Full-Stack Web Developer |
+                            Laravel | React | Docker</h3>
+
+                        <!-- CTA Buttons -->
+                        <div class="cta-buttons fade-in">
+                            <a href="Michail_Fullstack_CV_2026.pdf" download class="btn-cta btn-cta--primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                                </svg>
+                                Download CV
+                            </a>
+                            <a href="#colophon" class="btn-cta btn-cta--secondary smoothscroll">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                                Contact Me
+                            </a>
+                        </div>
                     </div>
 
                     <div class="s-intro__bg"></div>
@@ -293,20 +321,83 @@
                             Technical Skills & Expertise
                         </h2>
 
-                        <ul class="skill-bars">
-                            <li>
-                                <strong>Frontend: JavaScript, HTML5, CSS3, Tailwind CSS, Basic React Concepts</strong>
-                            </li>
-                            <li>
-                                <strong>Backend Framework: Laravel (PHP), Gin (Golang)</strong>
-                            </li>
-                            <li>
-                                <strong>Containerization & DevOps: Docker, CI/CD Concepts</strong>
-                            </li>
-                            <li>
-                                <strong>Database: MySQL, PostgreSQL, SQLite</strong>
-                            </li>
-                        </ul>
+                        <div class="skills-category fade-in">
+                            <h4>Frontend Development</h4>
+                            <div class="skills-grid">
+                                <div class="skill-chip">
+                                    <i class="devicon-html5-plain-wordmark colored"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-css3-plain-wordmark colored"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-javascript-plain colored"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-react-original-wordmark colored"></i>
+                                    <span>React</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-tailwindcss-original-wordmark colored"></i>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category fade-in">
+                            <h4>Backend & Systems</h4>
+                            <div class="skills-grid">
+                                <div class="skill-chip">
+                                    <i class="devicon-laravel-original-wordmark colored"></i>
+                                    <span>Laravel</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-php-plain colored"></i>
+                                    <span>PHP</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-go-original-wordmark colored"></i>
+                                    <span>Golang</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-nodejs-plain-wordmark colored"></i>
+                                    <span>Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category fade-in">
+                            <h4>Databases & DevOps</h4>
+                            <div class="skills-grid">
+                                <div class="skill-chip">
+                                    <i class="devicon-mysql-original-wordmark colored"></i>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-postgresql-plain-wordmark colored"></i>
+                                    <span>PostgreSQL</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-redis-plain-wordmark colored"></i>
+                                    <span>Redis</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-docker-plain-wordmark colored"></i>
+                                    <span>Docker</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-git-plain-wordmark colored"></i>
+                                    <span>Git</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-linux-plain colored"></i>
+                                    <span>Linux</span>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div> <!-- end s-about__skills -->
@@ -342,19 +433,33 @@
                     <p class="text-huge-title">
                         Showcasing innovative solutions and technical excellence.
                     </p>
+
+                    <!-- Project Filters -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="web-app">Web Apps</button>
+                        <button class="filter-btn" data-filter="ai">AI Applications</button>
+                        <button class="filter-btn" data-filter="corporate">Corporate Sites</button>
+                        <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                    </div>
                 </div>
             </div>
 
             <div class="row folio-list block-lg-one-half block-stack-on-550" data-animate-block>
 
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/78/47/Ah3y4GVX_t.png"
                                 Title="TrackMyShipment: Advanced Shipment Tracking Solution" data-size="1920x1080"
                                 data-caption="<h4>TrackMyShipment: Advanced Shipment Tracking Solution</h4><p><a href='https://github.com/michailtjhang/TrackMyShipment' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Project on GitHub</a></p>">
                                 <img src="https://thumbs2.imgbox.com/78/47/Ah3y4GVX_t.png" alt="">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -378,14 +483,19 @@
                         </div>
                     </div>
                 </div> <!-- end column -->
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/02/08/gCOvY0J5_t.png"
                                 title="DonasiKita: Comprehensive Charity Management Platform" data-size="1920x1080"
                                 data-caption="<h4>DonasiKita: Comprehensive Charity Management Platform</h4><p><a href='https://github.com/michailtjhang/DonasiKita' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Project on GitHub</a></p>">
                                 <img src="https://thumbs2.imgbox.com/02/08/gCOvY0J5_t.png" alt="">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">Social Impact</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -409,8 +519,8 @@
                         </div>
                     </div>
                 </div> <!-- end column -->
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="enterprise">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg"
                                 title="TransTRACK Marketing Dashboard: Social Media Management Suite"
@@ -418,6 +528,11 @@
                                 data-caption="<h4>TransTRACK Marketing Dashboard</h4><p><a href='https://dashboard-marketing.transtrack.id/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
                                 <img src="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg" alt="">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">Social APIs</span>
+                                <span class="tech-badge">Enterprise</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -444,14 +559,19 @@
                     </div>
                 </div> <!-- end column -->
 
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="ai">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="images/portfolio/groqgpt.png"
                                 title="GroqGPT: Advanced AI Chat Interface" data-size="1920x1080"
                                 data-caption="<h4>GroqGPT Chat AI</h4><p><a href='https://groqgpt-chat-ai.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
                                 <img src="images/portfolio/groqgpt.png" alt="GroqGPT Chat Interface">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Groq API</span>
+                                <span class="tech-badge">Vercel</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -476,14 +596,19 @@
                     </div>
                 </div> <!-- end column -->
 
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="images/portfolio/budgetly.png"
                                 title="Budgetly: Smart Personal Finance Tracker" data-size="1920x1080"
                                 data-caption="<h4>Budgetly</h4><p><a href='https://budgetly-neon.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
                                 <img src="images/portfolio/budgetly.png" alt="Budgetly Finance App">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">Vercel</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -508,14 +633,19 @@
                     </div>
                 </div> <!-- end column -->
 
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="ai">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="images/portfolio/flashmind-ai.png"
                                 title="Flash Mind AI: Intelligent Study Assistant" data-size="1920x1080"
                                 data-caption="<h4>Flash Mind AI</h4><p><a href='https://flash-mind-ai-neon.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
                                 <img src="images/portfolio/flashmind-ai.png" alt="Flash Mind AI Application">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">AI</span>
+                                <span class="tech-badge">Education</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -540,14 +670,19 @@
                     </div>
                 </div> <!-- end column -->
 
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="corporate">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="images/portfolio/reinsan-capital.png"
                                 title="Reinsan Capital: Financial Investment Firm" data-size="1920x1080"
                                 data-caption="<h4>Reinsan Capital</h4><p><a href='https://reinsan-capital.co.id/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
                                 <img src="images/portfolio/reinsan-capital.png" alt="Reinsan Capital Website">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Corporate</span>
+                                <span class="tech-badge">Finance</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -572,14 +707,19 @@
                     </div>
                 </div> <!-- end column -->
 
-                <div class="column" data-animate-el>
-                    <div class="folio-item">
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
                             <a class="folio-item__thumb-link" href="images/portfolio/swift-vote.png"
                                 title="Swift Vote: Secure Voting Platform" data-size="1920x1080"
                                 data-caption="<h4>Swift Vote</h4><p><a href='https://swift-vote-beta.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
                                 <img src="images/portfolio/swift-vote.png" alt="Swift Vote Application">
                             </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Vercel</span>
+                                <span class="tech-badge">Web App</span>
+                            </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
@@ -676,7 +816,7 @@
                 <div class="ss-go-top">
                     <a class="smoothscroll" title="Back to Top" href="#top">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                            style="fill: rgba(0, 0, 0, 1);">
                             <path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"></path>
                         </svg>
                     </a>
@@ -734,6 +874,7 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
 
 </body>
 

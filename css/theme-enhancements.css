@@ -1,0 +1,711 @@
+/* =================================================================
+ * Portfolio Design Enhancements
+ * Dark Mode, Animations, Modern UI Improvements
+ * ================================================================= */
+
+/* ===================================================================
+ * # THEME VARIABLES - Light & Dark Mode
+ * =================================================================== */
+
+:root {
+    /* Light Mode Colors (Default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #f0f2f5;
+    --text-primary: #2D2327;
+    --text-secondary: #5a5a5a;
+    --text-tertiary: #808080;
+    --accent-primary: #5F9295;
+    --accent-secondary: #4a7b7e;
+    --accent-gradient: linear-gradient(135deg, #5F9295 0%, #4a7b7e 100%);
+    --border-color: #e0e0e0;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --overlay-dark: rgba(0, 0, 0, 0.5);
+    --overlay-light: rgba(255, 255, 255, 0.9);
+
+    /* CTA Colors */
+    --cta-primary: #0066cc;
+    --cta-primary-hover: #0052a3;
+    --cta-secondary: #ff6b35;
+    --cta-secondary-hover: #e55a2b;
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Colors */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #242424;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #f0f0f0;
+    --text-secondary: #b8b8b8;
+    --text-tertiary: #909090;
+    --accent-primary: #6fb3b8;
+    --accent-secondary: #5a9ca0;
+    --accent-gradient: linear-gradient(135deg, #6fb3b8 0%, #5a9ca0 100%);
+    --border-color: #3a3a3a;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --overlay-dark: rgba(0, 0, 0, 0.7);
+    --overlay-light: rgba(255, 255, 255, 0.1);
+
+    /* CTA Colors for dark mode */
+    --cta-primary: #3d8bfd;
+    --cta-primary-hover: #5a9fff;
+    --cta-secondary: #ff8c5a;
+    --cta-secondary-hover: #ffa073;
+
+    /* Original Augustine Variable Overrides */
+    --color-text: var(--text-primary);
+    --color-text-dark: var(--text-primary);
+    --color-text-light: var(--text-secondary);
+    --color-body: var(--bg-primary);
+    --color-border: var(--border-color);
+    --color-gray-17: var(--text-primary);
+    --color-gray-19: var(--text-primary);
+}
+
+/* Smooth theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="dark"] .s-header__branding a,
+[data-theme="dark"] .s-header__nav a,
+[data-theme="dark"] .s-footer__social a,
+[data-theme="dark"] .s-header__social a {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .s-header__social svg path,
+[data-theme="dark"] .s-footer__social svg path {
+    fill: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .s-header__menu-toggle span {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .s-header__menu-toggle::before,
+[data-theme="dark"] .s-header__menu-toggle::after,
+[data-theme="dark"] .s-header__menu-toggle span::before,
+[data-theme="dark"] .s-header__menu-toggle span::after {
+    background-color: var(--text-primary);
+}
+
+/* ===================================================================
+ * # DARK MODE TOGGLE SWITCH
+ * =================================================================== */
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    z-index: 1000;
+}
+
+.theme-toggle__switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background: var(--border-color);
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle__switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .theme-toggle__switch {
+    background: var(--accent-primary);
+}
+
+[data-theme="dark"] .theme-toggle__switch::after {
+    transform: translateX(24px);
+}
+
+.theme-toggle__icon {
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle__icon--sun {
+    opacity: 1;
+}
+
+.theme-toggle__icon--moon {
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+    opacity: 1;
+}
+
+/* ===================================================================
+ * # ANIMATED GRADIENT TEXT & SCALING
+ * =================================================================== */
+
+.s-header__branding {
+    font-size: 3.8rem;
+    /* Scaled up from 3rem */
+}
+
+.s-header__branding a {
+    font-weight: 700;
+}
+
+.s-intro__text-huge {
+    font-size: clamp(8rem, 20vw, 24.6rem);
+    /* Restored to massive scale */
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg,
+            #5F9295 0%,
+            #3d6e72 25%,
+            #5F9295 50%,
+            #3d6e72 75%,
+            #5F9295 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 8s ease infinite;
+    display: inline-block;
+}
+
+[data-theme="dark"] .gradient-text {
+    background: linear-gradient(135deg,
+            #6fb3b8 0%,
+            #4a9ca0 25%,
+            #6fb3b8 50%,
+            #4a9ca0 75%,
+            #6fb3b8 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===================================================================
+ * # TYPING EFFECT
+ * =================================================================== */
+
+.typing-text {
+    overflow: hidden;
+    border-right: 3px solid var(--accent-primary);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--accent-primary);
+    }
+}
+
+/* ===================================================================
+ * # CTA BUTTONS
+ * =================================================================== */
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta--primary {
+    background: var(--cta-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.btn-cta--primary:hover {
+    background: var(--cta-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+}
+
+.btn-cta--secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    /* Use text color for outline to guarantee contrast */
+}
+
+.btn-cta--secondary:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+/* Ripple effect */
+.btn-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-cta:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ===================================================================
+ * # PROJECT FILTER BUTTONS
+ * =================================================================== */
+
+.project-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===================================================================
+ * # ENHANCED PROJECT CARDS
+ * =================================================================== */
+
+.folio-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.folio-item:hover {
+    transform: translateY(-8px);
+}
+
+.folio-item__thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.folio-item:hover .folio-item__thumb {
+    box-shadow: var(--shadow-lg);
+}
+
+.folio-item__thumb img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.folio-item:hover .folio-item__thumb img {
+    transform: scale(1.05);
+}
+
+/* Tech stack badges overlay */
+.tech-stack {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.folio-item:hover .tech-stack {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tech-badge {
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* ===================================================================
+ * # SKILL ICONS & CHIPS
+ * =================================================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.skill-chip:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-primary);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-chip i,
+.skill-chip svg,
+.skill-chip .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+    transition: transform 0.3s ease;
+}
+
+.skill-chip:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-chip span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skills-category h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-primary);
+    border-left: 3px solid var(--accent-primary);
+    padding-left: 1rem;
+}
+
+/* ===================================================================
+ * # SCROLL ANIMATIONS
+ * =================================================================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger animation delays */
+.fade-in:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.fade-in:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.fade-in:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.fade-in:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.fade-in:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+/* ===================================================================
+ * # THEME OVERRIDES FOR EXISTING ELEMENTS
+ * =================================================================== */
+
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .s-header {
+    background-color: var(--bg-secondary);
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .s-intro {
+    background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .s-about,
+[data-theme="dark"] .s-works,
+[data-theme="dark"] .p-partners,
+[data-theme="dark"] .s-footer,
+[data-theme="dark"] section {
+    background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .s-intro {
+    background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .site-title a {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .text-pretitle {
+    color: var(--accent-primary);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .h1,
+[data-theme="dark"] .h2,
+[data-theme="dark"] .h3,
+[data-theme="dark"] .h4,
+[data-theme="dark"] .h5,
+[data-theme="dark"] .h6 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .timeline__block {
+    border-left-color: var(--border-color);
+}
+
+[data-theme="dark"] .timeline__bullet {
+    background-color: var(--accent-primary);
+    border-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .folio-item__info {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .clients-list a {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .clients-list a:hover {
+    color: var(--accent-primary);
+}
+
+/* ===================================================================
+ * # LOADING SKELETON
+ * =================================================================== */
+
+.skeleton {
+    background: linear-gradient(90deg,
+            var(--bg-tertiary) 25%,
+            var(--bg-secondary) 50%,
+            var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ===================================================================
+ * # RESPONSIVE ADJUSTMENTS
+ * =================================================================== */
+
+@media screen and (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-cta {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+/* ===================================================================
+ * # UTILITY CLASSES
+ * =================================================================== */
+
+.text-gradient {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .glass-effect {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
