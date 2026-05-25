@@ -3,8 +3,6 @@
 
 <head>
 
-    <!--- basic page needs
-    ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Michail</title>
@@ -14,16 +12,12 @@
         document.documentElement.classList.add('js');
     </script>
 
-    <!-- CSS
-    ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom-fixes.css">
     <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <!-- favicons
-    ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Icon-M.png">
     <link rel="manifest" href="site.webmanifest">
@@ -34,20 +28,14 @@
 <body id="top">
 
 
-    <!-- preloader
-    ================================================== -->
     <div id="preloader">
         <div id="loader" class="line"></div>
     </div>
 
 
-    <!-- page wrap
-    ================================================== -->
     <div id="page" class="s-pagewrap">
 
 
-        <!-- # site header 
-        ================================================== -->
         <header id="masthead" class="s-header">
 
             <div class="s-header__block">
@@ -58,8 +46,7 @@
                 </div>
 
                 <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-            </div> <!-- end s-header__block -->
-
+            </div>
             <div class="row s-header__nav-wrap">
 
                 <nav class="s-header__nav">
@@ -69,36 +56,39 @@
                         <li><a href="#works" class="smoothscroll">Works</a></li>
                         <li><a href="#colophon" class="smoothscroll">Contact</a></li>
                     </ul>
-                </nav> <!-- end s-header__nav -->
-
-                <!-- Dark Mode Toggle moved here -->
-                <div class="theme-toggle" title="Toggle Dark Mode">
-                    <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
-                    <div class="theme-toggle__switch"></div>
-                    <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
-                </div>
-
+                </nav>
                 <ul class="s-header__social">
-                    <li>
-                        <a href="https://www.facebook.com/michail.tjhang/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill:rgba(0, 0, 0, 1);">
-                                <path
-                                    d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z">
-                                </path>
+                    <li class="theme-toggle-wrapper">
+                        <button class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+                            <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                             </svg>
-                            <span class="u-screen-reader-text">Facebook</span>
-                        </a>
+                            <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
                     </li>
                     <li>
-                        <a href="https://x.com/michailtj39" target="_blank">
+                        <a href="https://linkedin.com/in/michail" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 style="fill:rgba(0, 0, 0, 1);">
                                 <path
-                                    d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z">
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
                                 </path>
                             </svg>
-                            <span class="u-screen-reader-text">Twitter</span>
+                            <span class="u-screen-reader-text">LinkedIn</span>
                         </a>
                     </li>
                     <li>
@@ -112,25 +102,9 @@
                             <span class="u-screen-reader-text">Github</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.instagram.com/michail.kx/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                style="fill:rgba(75, 0, 130, 1);">
-                                <path
-                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                            </svg>
-                            <span class="u-screen-reader-text">Instagram</span>
-                        </a>
-                    </li>
-                </ul> <!-- end s-header__social -->
-
-            </div> <!-- end s-header__nav-wrap -->
-
-        </header> <!-- end s-header -->
-
-
-        <!-- intro
-        ================================================== -->
+                </ul>
+            </div>
+        </header>
         <section id="intro" class="s-intro">
 
             <div class="row">
@@ -141,12 +115,11 @@
                             Michail
                         </h1>
                         <h3 class="animate-on-load typing-text"
-                            data-text="Full-Stack Web Developer | Laravel | React | Docker">Full-Stack Web Developer |
-                            Laravel | React | Docker</h3>
+                            data-text="Full-Stack Web Developer | PHP (Laravel) | Golang | React | Docker">Full-Stack
+                            Web Developer | PHP (Laravel) | Next.js | Docker</h3>
 
-                        <!-- CTA Buttons -->
                         <div class="cta-buttons fade-in">
-                            <a href="Michail_Fullstack_CV_2026.pdf" download class="btn-cta btn-cta--primary">
+                            <a href="Michail_CV.pdf" download class="btn-cta btn-cta--primary">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                                 </svg>
@@ -167,11 +140,7 @@
                 </div>
             </div>
 
-        </section> <!-- end s-intro -->
-
-
-        <!-- about
-        ================================================== -->
+        </section>
         <section id="about" class="s-about">
 
 
@@ -182,18 +151,16 @@
                         <h2 class="text-pretitle animate-on-load">About Me</h2>
 
                         <p class="attention-getter animate-on-load">
-                            Organized and solutions-oriented Informatics Engineering graduate (3.89 GPA) from Dian
-                            Nusantara University, seeking a Full-stack Developer role. A BNSP-certified Junior Web
-                            Developer with internship-proven skills in PHP (Laravel), SQL (MySQL, PostgreSQL), and
-                            Docker. Eager to apply strong problem-solving abilities in a challenging development
-                            environment.
+                            Informatics Engineering graduate (3.89 GPA) with hands-on experience in Fullstack Web
+                            Development, specializing in PHP (Laravel), custom WordPress plugin engineering, and API
+                            integration. Strong background in building end-to-end web applications, handling web
+                            security cleanup, and setting up automated data workflows using Google Apps Script. Proven
+                            ability to collaborate in team environments and write clean, maintainable code.
                         </p>
                     </div>
                 </div>
 
-            </div> <!-- end s-about__intro -->
-
-
+            </div>
             <div class="s-about__block s-about__career">
 
                 <div class="row s-about__career-header">
@@ -219,22 +186,27 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">OK OCE Indonesia</h4>
-                                    <h5 class="timeline__meta">Web Developer (Contract)</h5>
-                                    <p class="timeline__timeframe">November 2025 - Present</p>
+                                    <h5 class="timeline__meta">Web Developer (Maganghub Kemnaker)</h5>
+                                    <p class="timeline__timeframe">November 2025 - May 2026</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <ul>
-                                        <li>Redesigned the official OK OCE Indonesia website using WordPress, focusing
-                                            on modernizing the UI/UX and optimizing site performance while maintaining
-                                            existing database integrity.</li>
-                                        <li>Developed a high-performance static website for Reinsan Capital using React,
-                                            ensuring a fully responsive design and streamlined user interface.</li>
-                                        <li>Enhanced the OK OCE event application by integrating third-party Payment
-                                            APIs and WhatsApp OTP services to provide secure transaction and user
-                                            authentication workflows.</li>
-                                        <li>Managed the end-to-end deployment process of the mobile application to the
-                                            Google Play Store, including configuration, asset management, and compliance
-                                            checks.</li>
+                                        <li>Co-developed a multi-tenant Event Management Dashboard with Trisakti
+                                            University, allowing community drivers (Penggerak) to host events
+                                            independently under OK OCE superadmin control.</li>
+                                        <li>Wrote the OK OCE Finpay Plugin to connect Elementor forms with Finpay API,
+                                            automating paid event transactions and eliminating manual verification.</li>
+                                        <li>Built the OK OCE Tracker Plugin and set up a Google Apps Script pipeline to
+                                            sync event data (Pre/Post-test, Satisfaction Index, M&E) into Google Sheets
+                                            and the public laporan-dampak dashboard.</li>
+                                        <li>Integrated WhatsApp OTP verification via Fazzpass API on registration forms
+                                            to secure user endpoints and eliminate fake accounts.</li>
+                                        <li>Redesigned the okoce.net homepage using optimized Elementor components and
+                                            prepared technical documentations to secure the official PSE Kominfo
+                                            certification.</li>
+                                        <li>Resolved a critical security incident by removing malware and gambling
+                                            script injections from the Executive Chairman's websites, securing the
+                                            domains behind Cloudflare to mitigate future breaches.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -243,50 +215,27 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">TransTRACK</h4>
-                                    <h5 class="timeline__meta">Full-Stack Developer Intern</h5>
+                                    <h5 class="timeline__meta">Full Stack Developer (Internship)</h5>
                                     <p class="timeline__timeframe">April 2024 - October 2024</p>
                                 </div>
                                 <div class="timeline__desc">
                                     <ul>
-                                        <li>Architected and developed comprehensive monitoring and publishing tools for
-                                            the marketing division, seamlessly integrating with major social media
-                                            platforms including Instagram, Facebook, and LinkedIn.</li>
-                                        <li>Engineered robust server-side solutions using Laravel framework, implemented
-                                            responsive user interfaces with Tailwind CSS, and optimized MySQL database
-                                            performance. Successfully deployed applications while maintaining 99% uptime
-                                            and continuously improving system performance through code optimization and
-                                            monitoring.</li>
+                                        <li>Built a social media management dashboard using Laravel and Tailwind UI to
+                                            fetch and display analytics data from official Instagram, Facebook, and
+                                            LinkedIn APIs.</li>
+                                        <li>Set up the development environment using Docker and handled database
+                                            migrations, utilizing asynchronous Queue Workers to handle background data
+                                            syncing reliably.</li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">BTPN Syariah x Rakamin Academy</h4>
-                                    <h5 class="timeline__meta">Project-Based Virtual Intern: Full-Stack Developer</h5>
-                                    <p class="timeline__timeframe">February 2024 - March 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <ul>
-                                        <li>Developed and maintained scalable web applications using Golang and MySQL,
-                                            focusing on clean architecture and efficient data management.</li>
-                                        <li>Designed and implemented RESTful APIs following industry best practices,
-                                            managed complex server-side logic, and ensured seamless deployment
-                                            processes. Consistently delivered optimized solutions while expanding
-                                            expertise in modern web development technologies.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div> <!-- end timeline -->
-
-                    </div> <!-- end s-about__timeline-section -->
-
+                        </div>
+                    </div>
                     <div class="column lg-6 stack-on-900 s-about__timeline-section" data-animate-el>
 
                         <h2 class="text-subtitle">
-                            Education
+                            Education & Certifications
                         </h2>
 
                         <div class="timeline">
@@ -295,25 +244,31 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Dian Nusantara University</h4>
-                                    <h5 class="timeline__meta">Bachelor's Degree in Informatics Engineering</h5>
-                                    <p class="timeline__timeframe">2021 - 2025</p>
+                                    <h5 class="timeline__meta">Bachelor of Informatics Engineering</h5>
+                                    <p class="timeline__timeframe">Graduated 2025</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Currently pursuing a comprehensive degree in Informatics Engineering with a focus
-                                        on software development, database systems, and web technologies. Maintaining an
-                                        exceptional academic record with a GPA of 3.89 while actively participating in
-                                        practical projects and leadership roles. The curriculum encompasses advanced
-                                        programming concepts, system analysis and design, database management, and
-                                        emerging technologies in the field of computer science.</p>
+                                    <p>Graduated with an exceptional academic record, achieving a GPA of 3.89 / 4.00.
+                                    </p>
                                 </div>
                             </div>
 
-                        </div> <!-- end timeline -->
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">BNSP Certifications</h4>
+                                    <h5 class="timeline__meta">Junior Web Developer</h5>
+                                    <p class="timeline__timeframe">Valid until 2028</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Certified by the Indonesian Professional Certification Authority (BNSP) in UI
+                                        Implementation, API integration, and Database Best Practices.</p>
+                                </div>
+                            </div>
 
-                    </div> <!-- end s-about__timeline-section -->
-
-                </div> <!-- end about__timeline -->
-
+                        </div>
+                    </div>
+                </div>
                 <div class="row s-about__skills" data-animate-block>
                     <div class="column lg-12" data-animate-el>
 
@@ -322,86 +277,85 @@
                         </h2>
 
                         <div class="skills-category fade-in">
-                            <h4>Frontend Development</h4>
+                            <h4>Languages & Database</h4>
                             <div class="skills-grid">
-                                <div class="skill-chip">
-                                    <i class="devicon-html5-plain-wordmark colored"></i>
-                                    <span>HTML5</span>
-                                </div>
-                                <div class="skill-chip">
-                                    <i class="devicon-css3-plain-wordmark colored"></i>
-                                    <span>CSS3</span>
-                                </div>
-                                <div class="skill-chip">
-                                    <i class="devicon-javascript-plain colored"></i>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="skill-chip">
-                                    <i class="devicon-react-original-wordmark colored"></i>
-                                    <span>React</span>
-                                </div>
-                                <div class="skill-chip">
-                                    <i class="devicon-tailwindcss-original-wordmark colored"></i>
-                                    <span>Tailwind CSS</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills-category fade-in">
-                            <h4>Backend & Systems</h4>
-                            <div class="skills-grid">
-                                <div class="skill-chip">
-                                    <i class="devicon-laravel-original-wordmark colored"></i>
-                                    <span>Laravel</span>
-                                </div>
                                 <div class="skill-chip">
                                     <i class="devicon-php-plain colored"></i>
-                                    <span>PHP</span>
+                                    <span>PHP (Laravel)</span>
                                 </div>
                                 <div class="skill-chip">
-                                    <i class="devicon-go-original-wordmark colored"></i>
-                                    <span>Golang</span>
+                                    <i class="devicon-go-plain colored"></i>
+                                    <span>Golang (Gin)</span>
                                 </div>
                                 <div class="skill-chip">
-                                    <i class="devicon-nodejs-plain-wordmark colored"></i>
-                                    <span>Node.js</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills-category fade-in">
-                            <h4>Databases & DevOps</h4>
-                            <div class="skills-grid">
-                                <div class="skill-chip">
-                                    <i class="devicon-mysql-original-wordmark colored"></i>
-                                    <span>MySQL</span>
-                                </div>
-                                <div class="skill-chip">
-                                    <i class="devicon-postgresql-plain-wordmark colored"></i>
+                                    <i class="devicon-postgresql-plain colored"></i>
                                     <span>PostgreSQL</span>
                                 </div>
                                 <div class="skill-chip">
-                                    <i class="devicon-redis-plain-wordmark colored"></i>
-                                    <span>Redis</span>
+                                    <i class="devicon-mysql-plain colored"></i>
+                                    <span>MySQL</span>
                                 </div>
                                 <div class="skill-chip">
-                                    <i class="devicon-docker-plain-wordmark colored"></i>
+                                    <i class="devicon-javascript-plain colored"></i>
+                                    <span>JavaScript (ES6+)</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-typescript-plain colored"></i>
+                                    <span>TypeScript</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-html5-plain colored"></i>
+                                    <span>HTML5 / CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category fade-in">
+                            <h4>Web Technologies</h4>
+                            <div class="skills-grid">
+                                <div class="skill-chip">
+                                    <i class="devicon-nextjs-plain colored"></i>
+                                    <span>Next.js</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-react-original colored"></i>
+                                    <span>React.js</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-tailwindcss-original colored"></i>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-wordpress-plain colored"></i>
+                                    <span>WordPress (Custom Plugins)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category fade-in">
+                            <h4>Tools & Infrastructure</h4>
+                            <div class="skills-grid">
+                                <div class="skill-chip">
+                                    <i class="devicon-docker-plain colored"></i>
                                     <span>Docker</span>
                                 </div>
                                 <div class="skill-chip">
-                                    <i class="devicon-git-plain-wordmark colored"></i>
+                                    <i class="devicon-git-plain colored"></i>
                                     <span>Git</span>
                                 </div>
                                 <div class="skill-chip">
-                                    <i class="devicon-linux-plain colored"></i>
-                                    <span>Linux</span>
+                                    <i class="devicon-cloudflare-plain colored"></i>
+                                    <span>Cloudflare Security</span>
+                                </div>
+                                <div class="skill-chip">
+                                    <i class="devicon-google-plain colored"></i>
+                                    <span>Google Apps Script</span>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                </div> <!-- end s-about__skills -->
-
+                </div>
                 <div class="row s-about__clients" data-animate-block>
                     <div class="column lg-12" data-animate-el>
 
@@ -410,20 +364,14 @@
                         <ul class="clients-list text-huge-title">
                             <li><a href="https://okoce.net/">OK OCE Indonesia</a></li>
                             <li><a href="https://www.transtrack.co/id">TransTRACK</a></li>
-                            <li><a href="https://maxy.academy/">Maxy Academy</a></li>
                             <li><a href="https://reguler.undira.ac.id/">Dian Nusantara University</a></li>
                         </ul>
 
                     </div>
-                </div> <!-- end s-about__clients-->
+                </div>
+            </div>
+        </section>
 
-            </div> <!-- end s-about__career -->
-
-        </section> <!-- end s-about -->
-
-
-        <!-- # works
-        ================================================== -->
         <section id="works" class="s-works">
 
             <div class="row">
@@ -434,7 +382,6 @@
                         Showcasing innovative solutions and technical excellence.
                     </p>
 
-                    <!-- Project Filters -->
                     <div class="project-filters">
                         <button class="filter-btn active" data-filter="all">All Projects</button>
                         <button class="filter-btn" data-filter="web-app">Web Apps</button>
@@ -450,88 +397,77 @@
                 <div class="column fade-in" data-animate-el>
                     <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/78/47/Ah3y4GVX_t.png"
-                                Title="TrackMyShipment: Advanced Shipment Tracking Solution" data-size="1920x1080"
-                                data-caption="<h4>TrackMyShipment: Advanced Shipment Tracking Solution</h4><p><a href='https://github.com/michailtjhang/TrackMyShipment' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Project on GitHub</a></p>">
-                                <img src="https://thumbs2.imgbox.com/78/47/Ah3y4GVX_t.png" alt="">
+                            <a class="folio-item__thumb-link" href="https://okoce.net/"
+                                title="Okoce.net Core Redesign & Tracker System" data-size="1920x1080">
+                                <img src="images/portfolio/okoce.png" alt="Okoce.net Core Redesign">
                             </a>
                             <div class="tech-stack">
-                                <span class="tech-badge">Laravel</span>
-                                <span class="tech-badge">MySQL</span>
-                                <span class="tech-badge">Bootstrap</span>
+                                <span class="tech-badge">WordPress</span>
+                                <span class="tech-badge">Elementor HTML</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">Google Apps Script</span>
                             </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
-                                <span class="cat">Full-Stack Application</span>
-                                <a href="https://github.com/michailtjhang/TrackMyShipment" title="Project Repository"
-                                    class="project-link">View Project</a>
+                                <span class="cat">Web Development & Automation</span>
+                                <a href="https://okoce.net/" title="Live Platform" class="project-link">View Live</a>
                             </div>
-                            <h4 class="folio-item__title">TrackMyShipment: Advanced Shipment Tracking Solution</h4>
+                            <h4 class="folio-item__title">Okoce.net Core Redesign & Tracker System</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>A comprehensive shipment tracking application that enables real-time package monitoring
-                                and status updates. This solution enhances transparency in the logistics process,
-                                providing customers with detailed tracking information and improving overall user
-                                experience through intuitive design and reliable performance.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://github.com/michailtjhang/TrackMyShipment" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Project on GitHub
-                                </a>
-                            </p>
+                            <p>Overhauled core platform interfaces by injecting custom Tailwind CSS and JavaScript into
+                                Elementor blocks, fixing responsiveness and accelerating page loading speed[cite: 25,
+                                27]. Built the OK OCE Tracker Plugin and set up a data routing flow using Google Apps
+                                Script to capture frontend interactions and securely stream them into analytical
+                                spreadsheets and the public laporan-dampak dashboard[cite: 16, 28].</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
+                </div>
                 <div class="column fade-in" data-animate-el>
-                    <div class="folio-item" data-category="web-app">
+                    <div class="folio-item" data-category="corporate">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/02/08/gCOvY0J5_t.png"
-                                title="DonasiKita: Comprehensive Charity Management Platform" data-size="1920x1080"
-                                data-caption="<h4>DonasiKita: Comprehensive Charity Management Platform</h4><p><a href='https://github.com/michailtjhang/DonasiKita' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Project on GitHub</a></p>">
-                                <img src="https://thumbs2.imgbox.com/02/08/gCOvY0J5_t.png" alt="">
+                            <a class="folio-item__thumb-link" href="https://reinsan-capital.co.id/"
+                                title="Reinsan Capital Official Platform" data-size="1920x1080">
+                                <img src="images/portfolio/reinsan-capital.png" alt="Reinsan Capital Website">
                             </a>
                             <div class="tech-stack">
-                                <span class="tech-badge">Laravel</span>
-                                <span class="tech-badge">MySQL</span>
-                                <span class="tech-badge">Social Impact</span>
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">Elementor UI Patterns</span>
+                                <span class="tech-badge">SEO</span>
                             </div>
                         </div>
                         <div class="folio-item__info">
                             <div class="folio-item__meta">
-                                <span class="cat">Social Impact Platform</span>
-                                <a href="https://github.com/michailtjhang/DonasiKita" title="Project Repository"
-                                    class="project-link">View Project</a>
+                                <span class="cat">Corporate Landing Page</span>
+                                <a href="https://reinsan-capital.co.id/" title="Live Site" class="project-link">View
+                                    Live</a>
                             </div>
-                            <h4 class="folio-item__title">DonasiKita: Comprehensive Charity Management Platform</h4>
+                            <h4 class="folio-item__title">Reinsan Capital Official Platform</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>An innovative charity management platform that streamlines donation processes and
-                                facilitates meaningful connections between donors and beneficiaries. The application
-                                features secure payment processing, campaign management tools, and transparent fund
-                                tracking to build trust and maximize social impact.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://github.com/michailtjhang/DonasiKita" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Project on GitHub
-                                </a>
-                            </p>
+                            <p>Developed a high-performance React.js corporate landing page designed for MSME scaling
+                                and investment management[cite: 29]. Utilized Tailwind CSS based on Elementor HTML
+                                layouts to achieve a clean, mobile-first interface and properly optimized SEO
+                                structure[cite: 29].</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
+                </div>
                 <div class="column fade-in" data-animate-el>
                     <div class="folio-item" data-category="enterprise">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg"
+                            <a class="folio-item__thumb-link" href="https://dashboard-marketing.transtrack.id/"
                                 title="TransTRACK Marketing Dashboard: Social Media Management Suite"
-                                data-size="1920x1080"
-                                data-caption="<h4>TransTRACK Marketing Dashboard</h4><p><a href='https://dashboard-marketing.transtrack.id/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
-                                <img src="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg" alt="">
+                                data-size="1920x1080">
+                                <img src="https://thumbs2.imgbox.com/c3/3c/ARHDWSSq_t.jpeg"
+                                    alt="TransTRACK Marketing Dashboard">
                             </a>
                             <div class="tech-stack">
                                 <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">Tailwind UI</span>
                                 <span class="tech-badge">Social APIs</span>
-                                <span class="tech-badge">Enterprise</span>
+                                <span class="tech-badge">Docker</span>
                             </div>
                         </div>
                         <div class="folio-item__info">
@@ -543,33 +479,54 @@
                             <h4 class="folio-item__title">TransTRACK Marketing Dashboard</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>A sophisticated social media management suite designed for enterprise-level marketing
-                                operations. The platform provides comprehensive monitoring and management capabilities
-                                for Instagram, Facebook, TikTok, and other social platforms. Features include advanced
-                                analytics, automated content scheduling, performance tracking, and integrated publishing
-                                workflows that optimize social media presence and engagement for businesses and
-                                organizations.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://dashboard-marketing.transtrack.id/" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Live Application
-                                </a>
-                            </p>
+                            <p>Built a social media management dashboard using Laravel and Tailwind UI to fetch and
+                                display analytics data from official Instagram, Facebook, and LinkedIn APIs[cite: 22].
+                                Set up the environment using Docker and managed asynchronous Queue Workers to handle
+                                background data syncing reliably[cite: 23].</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
-
+                </div>
+                <div class="column fade-in" data-animate-el>
+                    <div class="folio-item" data-category="web-app">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="https://komorebi-labs.vercel.app/"
+                                title="Komorebi: Next-Gen Manga & Comic Platform" data-size="1920x1080">
+                                <img src="images/portfolio/komorebi.png" alt="Komorebi Platform">
+                            </a>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">UploadThing</span>
+                            </div>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                                <span class="cat">Web Application</span>
+                                <a href="https://komorebi-labs.vercel.app/" title="Live Application"
+                                    class="project-link">View Live</a>
+                            </div>
+                            <h4 class="folio-item__title">Komorebi Comic Platform</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>A next-generation digital manga and comic reading platform built using Next.js and
+                                Tailwind CSS. Implements a highly optimized, high-fidelity image rendering system backed
+                                by PostgreSQL for structured data and content tracking, alongside UploadThing for
+                                streamlined and secure chapter file storage and asset management.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="column fade-in" data-animate-el>
                     <div class="folio-item" data-category="ai">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="images/portfolio/groqgpt.png"
-                                title="GroqGPT: Advanced AI Chat Interface" data-size="1920x1080"
-                                data-caption="<h4>GroqGPT Chat AI</h4><p><a href='https://groqgpt-chat-ai.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
+                            <a class="folio-item__thumb-link" href="https://groqgpt-chat-ai.vercel.app/"
+                                title="GroqGPT: Advanced AI Chat Interface" data-size="1920x1080">
                                 <img src="images/portfolio/groqgpt.png" alt="GroqGPT Chat Interface">
                             </a>
                             <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Groq API</span>
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">Groq LLM API</span>
+                                <span class="tech-badge">Tailwind CSS</span>
                                 <span class="tech-badge">Vercel</span>
                             </div>
                         </div>
@@ -582,32 +539,23 @@
                             <h4 class="folio-item__title">GroqGPT: Advanced AI Chat Interface</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>A powerful AI chat interface leveraging the Groq API for ultra-fast responses. Features a
-                                modern, responsive design similar to ChatGPT, with support for markdown rendering, code
-                                syntax highlighting, and seamless conversation history management. Built with
-                                cutting-edge web technologies for optimal performance.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://groqgpt-chat-ai.vercel.app/" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Live Application
-                                </a>
-                            </p>
+                            <p>A powerful AI chat interface leveraging the Groq API for ultra-fast response streams.
+                                Features a clean interface with support for Markdown rendering, code block syntax
+                                highlighting, and persistent client-side conversation history management.</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
-
+                </div>
                 <div class="column fade-in" data-animate-el>
                     <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="images/portfolio/budgetly.png"
-                                title="Budgetly: Smart Personal Finance Tracker" data-size="1920x1080"
-                                data-caption="<h4>Budgetly</h4><p><a href='https://budgetly-neon.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
+                            <a class="folio-item__thumb-link" href="https://budgetly-neon.vercel.app/"
+                                title="Budgetly: Smart Personal Finance Tracker" data-size="1920x1080">
                                 <img src="images/portfolio/budgetly.png" alt="Budgetly Finance App">
                             </a>
                             <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">CSS3</span>
-                                <span class="tech-badge">Vercel</span>
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">Chart.js Ecosystem</span>
+                                <span class="tech-badge">CSS3 Modules</span>
                             </div>
                         </div>
                         <div class="folio-item__info">
@@ -616,35 +564,26 @@
                                 <a href="https://budgetly-neon.vercel.app/" title="Live Application"
                                     class="project-link">View Live</a>
                             </div>
-                            <h4 class="folio-item__title">Budgetly: Smart Personal Finance Tracker</h4>
+                            <h4 class="folio-item__title">Budgetly: Personal Finance Tracker</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>An intuitive personal finance application designed to help users track income and
-                                expenses effortlessly. Features include interactive charts for visualization, budget
-                                goal setting, and category-wise spending analysis. The user-friendly interface makes
-                                financial management accessible and engaging.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://budgetly-neon.vercel.app/" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Live Application
-                                </a>
-                            </p>
+                            <p>An intuitive web application designed to help users track running financial flows.
+                                Implements reactive data streams, interactive data visualization components for monthly
+                                spending analysis, and goal setting to streamline user data tracking.</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
-
+                </div>
                 <div class="column fade-in" data-animate-el>
                     <div class="folio-item" data-category="ai">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="images/portfolio/flashmind-ai.png"
-                                title="Flash Mind AI: Intelligent Study Assistant" data-size="1920x1080"
-                                data-caption="<h4>Flash Mind AI</h4><p><a href='https://flash-mind-ai-neon.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
+                            <a class="folio-item__thumb-link" href="https://flash-mind-ai-neon.vercel.app/"
+                                title="Flash Mind AI: Intelligent Study Assistant" data-size="1920x1080">
                                 <img src="images/portfolio/flashmind-ai.png" alt="Flash Mind AI Application">
                             </a>
                             <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">AI</span>
-                                <span class="tech-badge">Education</span>
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">Generative AI</span>
+                                <span class="tech-badge">Tailwind CSS</span>
                             </div>
                         </div>
                         <div class="folio-item__info">
@@ -653,72 +592,26 @@
                                 <a href="https://flash-mind-ai-neon.vercel.app/" title="Live Application"
                                     class="project-link">View Live</a>
                             </div>
-                            <h4 class="folio-item__title">Flash Mind AI: Intelligent Study Assistant</h4>
+                            <h4 class="folio-item__title">Flash Mind AI: Study Assistant</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>An intelligent study companion that leverages artificial intelligence to create
-                                personalized learning experiences. Features include automated flashcard generation,
-                                progress tracking, and adaptive learning paths to help students master subjects more
-                                efficiently.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://flash-mind-ai-neon.vercel.app/" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Live Application
-                                </a>
-                            </p>
+                            <p>An educational companion that leverages large language models to construct adaptive
+                                learning pathways. Features automated flashcard generation workflows from plain text and
+                                real-time interactive progress indicators to optimize retention.</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
-
-                <div class="column fade-in" data-animate-el>
-                    <div class="folio-item" data-category="corporate">
-                        <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="images/portfolio/reinsan-capital.png"
-                                title="Reinsan Capital: Financial Investment Firm" data-size="1920x1080"
-                                data-caption="<h4>Reinsan Capital</h4><p><a href='https://reinsan-capital.co.id/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
-                                <img src="images/portfolio/reinsan-capital.png" alt="Reinsan Capital Website">
-                            </a>
-                            <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">Corporate</span>
-                                <span class="tech-badge">Finance</span>
-                            </div>
-                        </div>
-                        <div class="folio-item__info">
-                            <div class="folio-item__meta">
-                                <span class="cat">Corporate / Finance</span>
-                                <a href="https://reinsan-capital.co.id/" title="Live Application"
-                                    class="project-link">View Live</a>
-                            </div>
-                            <h4 class="folio-item__title">Reinsan Capital: Financial Investment Firm</h4>
-                        </div>
-                        <div class="folio-item__caption">
-                            <p>A professional corporate website for Reinsan Capital, showcasing their expertise in
-                                investment management and financial services. The site features a clean, trustworthy
-                                design with detailed service information, portfolio highlights, and secure client
-                                communication channels.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://reinsan-capital.co.id/" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Live Application
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div> <!-- end column -->
-
+                </div>
                 <div class="column fade-in" data-animate-el>
                     <div class="folio-item" data-category="web-app">
                         <div class="folio-item__thumb">
-                            <a class="folio-item__thumb-link" href="images/portfolio/swift-vote.png"
-                                title="Swift Vote: Secure Voting Platform" data-size="1920x1080"
-                                data-caption="<h4>Swift Vote</h4><p><a href='https://swift-vote-beta.vercel.app/' target='_blank' style='display:inline-block;margin-top:10px;padding:10px 20px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;'>View Live Application</a></p>">
+                            <a class="folio-item__thumb-link" href="https://swift-vote-beta.vercel.app/"
+                                title="Swift Vote: Secure Voting Platform" data-size="1920x1080">
                                 <img src="images/portfolio/swift-vote.png" alt="Swift Vote Application">
                             </a>
                             <div class="tech-stack">
-                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">State Management</span>
                                 <span class="tech-badge">Vercel</span>
-                                <span class="tech-badge">Web App</span>
                             </div>
                         </div>
                         <div class="folio-item__info">
@@ -730,26 +623,15 @@
                             <h4 class="folio-item__title">Swift Vote: Secure Voting Platform</h4>
                         </div>
                         <div class="folio-item__caption">
-                            <p>A secure and modern digital voting platform designed to facilitate transparent elections
-                                for communities and organizations. Features include real-time vote counting, candidate
-                                profiles, and a streamlined user interface for an effortless voting experience.</p>
-                            <p style="text-align: center; margin-top: 20px;">
-                                <a href="https://swift-vote-beta.vercel.app/" target="_blank"
-                                    style="display:inline-block;padding:12px 24px;background:#0066cc;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:background 0.3s;">
-                                    View Live Application
-                                </a>
-                            </p>
+                            <p>A lightweight, reliable digital polling platform designed for transparent community and
+                                organizational ballots. Features real-time responsive vote accumulation interfaces,
+                                structured candidate overview panels, and error-proof validation states.</p>
                         </div>
                     </div>
-                </div> <!-- end column -->
+                </div>
+            </div>
+        </section>
 
-            </div> <!-- folio-list -->
-
-        </section> <!-- end s-works -->
-
-
-        <!-- # site footer
-        ================================================== -->
         <footer id="colophon" class="s-footer">
 
             <div class="row s-footer__contact-header">
@@ -760,8 +642,7 @@
                         Ready to collaborate on your next project or discuss innovative solutions?
                     </p>
                 </div>
-            </div> <!-- end s-footer__content -->
-
+            </div>
             <div class="row s-footer__contact-content">
 
                 <div class="column lg-5 md-6 stack-on-900 left-block">
@@ -769,16 +650,13 @@
                         I'm passionate about creating impactful digital solutions and building meaningful professional
                         relationships. Whether you're looking for a dedicated full-stack developer for your team,
                         seeking consultation on a technical project, or simply want to connect with a fellow developer,
-                        I'd love to hear from you. Let's explore how we can work together to bring your ideas to life.
-
+                        I'd love to hear from you.
+                    </p>
                     <div class="s-footer__buttons">
                         <a href="mailto:michailaja@gmail.com" class="btn btn--primary u-fullwidth">Start a
                             Conversation</a>
-                        <a href="https://michailtjhang.github.io/Michail_Fullstack_CV_2026.pdf" target="_blank"
-                            class="btn btn--stroke u-fullwidth">Download Resume</a>
+                        <a href="Michail_CV.pdf" download class="btn btn--stroke u-fullwidth">Download Resume</a>
                     </div>
-
-                    </p>
                 </div>
 
                 <div class="column lg-4 md-5 stack-on-900 right-block">
@@ -789,6 +667,7 @@
                         </h2>
                         <ul class="link-list">
                             <li><a href="mailto:michailaja@gmail.com">michailaja@gmail.com</a></li>
+                            <li><span style="color: inherit;">Central Jakarta, DKI Jakarta</span></li>
                         </ul>
                     </div>
 
@@ -797,19 +676,16 @@
                             Connect & Follow
                         </h2>
                         <ul class="link-list">
-                            <li><a href="https://www.facebook.com/michail.tjhang/">Facebook</a></li>
-                            <li><a href="https://x.com/michailtj39">Twitter</a></li>
-                            <li><a href="https://github.com/michailtjhang">GitHub</a></li>
-                            <li><a href="https://www.instagram.com/michail.kx/">Instagram</a></li>
+                            <li><a href="https://linkedin.com/in/michail" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/michailtjhang" target="_blank">GitHub</a></li>
                         </ul>
                     </div>
 
                 </div>
-            </div> <!-- end s-footer__contact-content -->
-
+            </div>
             <div class="row s-footer__bottom">
                 <div class="column ss-copyright">
-                    <span>© Copyright Michail 2025</span>
+                    <span>© Copyright Michail 2026</span>
                     <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
                 </div>
 
@@ -821,15 +697,9 @@
                         </svg>
                     </a>
                 </div>
-            </div> <!-- end s-footer__bottom-->
-
-        </footer> <!-- end s-footer -->
-
-    </div> <!-- end s-pagewrap -->
-
-
-    <!-- photoswipe background
-    ================================================== -->
+            </div>
+        </footer>
+    </div>
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
 
         <div class="pswp__bg"></div>
@@ -867,11 +737,7 @@
 
         </div>
 
-    </div> <!-- end photoSwipe background -->
-
-
-    <!-- Java Script
-    ================================================== -->
+    </div>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/enhancements.js"></script>

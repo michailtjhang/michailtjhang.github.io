@@ -95,68 +95,79 @@
 }
 
 /* ===================================================================
- * # DARK MODE TOGGLE SWITCH
+ * # DARK MODE TOGGLE SWITCH (SVG Button Version)
  * =================================================================== */
 
 .theme-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    padding: 0.5rem;
-    margin-left: 2rem;
-    z-index: 1000;
+    padding: 0;
+    margin: 0 1rem 0 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    outline: none;
+    width: 2.8rem;
+    height: 2.8rem;
 }
 
-.theme-toggle__switch {
-    position: relative;
-    width: 48px;
-    height: 24px;
-    background: var(--border-color);
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
+@media screen and (max-width: 1000px) {
+    .theme-toggle {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
 }
 
-.theme-toggle__switch::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+.theme-toggle:hover {
+    color: var(--accent-primary);
+    transform: scale(1.15);
 }
 
-[data-theme="dark"] .theme-toggle__switch {
-    background: var(--accent-primary);
+.theme-icon {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
-[data-theme="dark"] .theme-toggle__switch::after {
-    transform: translateX(24px);
+.theme-icon--sun {
+    display: none;
 }
 
-.theme-toggle__icon {
-    font-size: 1.2rem;
-    transition: opacity 0.3s ease;
+.theme-icon--moon {
+    display: block;
 }
 
-.theme-toggle__icon--sun {
-    opacity: 1;
+/* Fill or stroke to match other icons */
+.theme-icon--moon path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
 }
 
-.theme-toggle__icon--moon {
-    opacity: 0.3;
+[data-theme="dark"] .theme-icon--sun {
+    display: block;
+    animation: rotateSun 15s linear infinite;
 }
 
-[data-theme="dark"] .theme-toggle__icon--sun {
-    opacity: 0.3;
+[data-theme="dark"] .theme-icon--sun circle {
+    fill: currentColor;
 }
 
-[data-theme="dark"] .theme-toggle__icon--moon {
-    opacity: 1;
+[data-theme="dark"] .theme-icon--sun line {
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+[data-theme="dark"] .theme-icon--moon {
+    display: none;
+}
+
+@keyframes rotateSun {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* ===================================================================
@@ -227,6 +238,7 @@
  * =================================================================== */
 
 .typing-text {
+    color: var(--text-secondary) !important;
     overflow: hidden;
     border-right: 3px solid var(--accent-primary);
     white-space: nowrap;
@@ -261,50 +273,60 @@
 
 .cta-buttons {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
     flex-wrap: wrap;
 }
 
 .btn-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    gap: 0.75rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 12px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    border: none;
     cursor: pointer;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-cta--primary {
-    background: var(--cta-primary);
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    background: var(--accent-primary);
+    color: white !important;
+    box-shadow: 0 4px 14px rgba(95, 146, 149, 0.4);
 }
 
 .btn-cta--primary:hover {
-    background: var(--cta-primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+    background: var(--accent-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(95, 146, 149, 0.6);
 }
 
 .btn-cta--secondary {
-    background: transparent;
-    color: var(--text-primary);
-    border: 2px solid var(--text-primary);
-    /* Use text color for outline to guarantee contrast */
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .btn-cta--secondary {
+    background: rgba(45, 45, 45, 0.85);
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-cta--secondary:hover {
     background: var(--bg-tertiary);
     border-color: var(--accent-primary);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Ripple effect */
@@ -434,7 +456,7 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -444,7 +466,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 2.2rem 1.5rem;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -462,32 +484,37 @@
 .skill-chip i,
 .skill-chip svg,
 .skill-chip .skill-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 4.8rem !important;
+    margin-bottom: 1.5rem;
     color: var(--accent-primary);
     transition: transform 0.3s ease;
+    display: inline-block;
+    line-height: 1;
 }
 
+.skill-chip:hover i,
+.skill-chip:hover svg,
 .skill-chip:hover .skill-icon {
     transform: scale(1.1);
 }
 
 .skill-chip span {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
 }
 
 .skills-category {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .skills-category h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: var(--accent-primary);
-    border-left: 3px solid var(--accent-primary);
-    padding-left: 1rem;
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 1.2rem;
+    font-weight: 600;
 }
 
 /* ===================================================================
@@ -673,11 +700,6 @@
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 1rem;
     }
-
-    .theme-toggle {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
 }
 
 /* ===================================================================
@@ -708,4 +730,282 @@
 [data-theme="dark"] .glass-effect {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===================================================================
+ * # INTRO SECTION — Full-Viewport 2-Column Hero
+ * =================================================================== */
+
+/* Base: shared between all breakpoints */
+.s-intro {
+    padding-top: var(--header-height) !important;
+    padding-bottom: 0 !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: var(--color-body) !important;
+}
+
+.s-intro .row {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.s-intro__content {
+    display: flex !important;
+    align-items: center !important;
+    width: 100%;
+}
+
+/* Reset absolute positioning from original template */
+.s-intro__text {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 5;
+}
+
+/* ----------------------------------------------------------------
+ * Desktop (≥ 901px) — Side-by-side layout
+ * ---------------------------------------------------------------- */
+@media screen and (min-width: 901px) {
+    .s-intro {
+        padding-top: var(--header-height) !important;
+        min-height: 100vh !important;
+    }
+
+    .s-intro .row {
+        max-width: 1200px;
+    }
+
+    .s-intro__content {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 5rem;
+    }
+
+    .s-intro__text {
+        width: 55% !important;
+        text-align: left !important;
+    }
+
+    .s-intro__text-huge {
+        font-size: clamp(6rem, 7vw, 10rem) !important;
+        margin-top: 0 !important;
+        margin-bottom: 1.6rem !important;
+        text-align: left !important;
+        line-height: 1.05 !important;
+    }
+
+    .typing-text {
+        text-align: left !important;
+        margin-bottom: 3.2rem !important;
+        font-size: clamp(1.6rem, 1.8vw, 2.2rem) !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        border-right: none !important;
+        animation: none !important;
+    }
+
+    .cta-buttons {
+        justify-content: flex-start !important;
+    }
+
+    .s-intro__bg {
+        width: 42% !important;
+        max-width: 440px !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 28px !important;
+        box-shadow: var(--shadow-lg) !important;
+        border: 8px solid rgba(255,255,255,0.55) !important;
+        flex-shrink: 0;
+    }
+}
+
+/* ----------------------------------------------------------------
+ * Tablet (600px – 900px) — Stacked, centered
+ * ---------------------------------------------------------------- */
+@media screen and (max-width: 900px) {
+    .s-intro {
+        padding-top: var(--header-height) !important;
+        padding-bottom: 4rem !important;
+        min-height: 100vh !important;
+    }
+
+    .s-intro__content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 4rem;
+    }
+
+    .s-intro__text {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .s-intro__text-huge {
+        font-size: clamp(4.8rem, 12vw, 8rem) !important;
+        margin-top: 0 !important;
+        margin-bottom: 1.2rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .typing-text {
+        text-align: center !important;
+        margin-bottom: 2.8rem !important;
+        font-size: clamp(1.5rem, 4vw, 2rem) !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        border-right: none !important;
+        animation: none !important;
+    }
+
+    .cta-buttons {
+        justify-content: center !important;
+    }
+
+    .s-intro__bg {
+        width: 72% !important;
+        max-width: 300px !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 22px !important;
+        box-shadow: var(--shadow-md) !important;
+        border: 6px solid rgba(255,255,255,0.5) !important;
+        margin: 0 auto;
+    }
+}
+
+/* ----------------------------------------------------------------
+ * Mobile (≤ 480px) — Compact hero
+ * ---------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .s-intro {
+        min-height: 100svh !important;
+    }
+
+    .s-intro__content {
+        gap: 3rem;
+    }
+
+    .s-intro__text-huge {
+        font-size: clamp(4rem, 14vw, 6rem) !important;
+    }
+
+    .typing-text {
+        font-size: 1.5rem !important;
+    }
+
+    .s-intro__bg {
+        width: 80% !important;
+        max-width: 260px !important;
+    }
+
+    .btn-cta {
+        padding: 1rem 1.8rem !important;
+        font-size: 1.3rem !important;
+    }
+}
+
+/* ===================================================================
+ * # ALTERNATING SECTION BACKGROUNDS
+ * =================================================================== */
+
+/* Section 1 — Intro: warm pastel teal (brand color) */
+.s-intro {
+    background-color: var(--color-body) !important;
+}
+
+/* Section 2 — About: clean white / dark near-black */
+.s-about {
+    background-color: var(--bg-primary) !important;
+}
+
+[data-theme="dark"] .s-about {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Section 3 — Works: soft gray / dark secondary */
+.s-works {
+    background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .s-works {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Section 4 — Footer/Contact: rich teal brand accent */
+.s-footer {
+    background-color: #5F9295 !important;
+    color: #fff !important;
+}
+
+[data-theme="dark"] .s-footer {
+    background-color: #2a4d50 !important;
+    color: #e8f4f4 !important;
+}
+
+/* Footer text contrast fixes */
+.s-footer .text-pretitle,
+.s-footer .text-huge-title,
+.s-footer .text-subtitle,
+.s-footer .link-list a,
+.s-footer .ss-copyright span,
+.s-footer .ss-copyright a {
+    color: #fff !important;
+}
+
+[data-theme="dark"] .s-footer .text-pretitle,
+[data-theme="dark"] .s-footer .text-huge-title,
+[data-theme="dark"] .s-footer .text-subtitle,
+[data-theme="dark"] .s-footer .link-list a,
+[data-theme="dark"] .s-footer .ss-copyright span,
+[data-theme="dark"] .s-footer .ss-copyright a {
+    color: #e8f4f4 !important;
+}
+
+.s-footer .link-list a:hover,
+.s-footer .ss-copyright a:hover {
+    color: #d0eaeb !important;
+    text-decoration: underline;
+}
+
+[data-theme="dark"] .s-footer .link-list a:hover,
+[data-theme="dark"] .s-footer .ss-copyright a:hover {
+    color: #b3d8da !important;
+}
+
+/* Footer CTA buttons on teal bg */
+.s-footer .btn-cta--primary {
+    background: #fff !important;
+    color: #5F9295 !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
+}
+
+.s-footer .btn-cta--primary:hover {
+    background: #d0eaeb !important;
+    color: #3d7073 !important;
+}
+
+.s-footer .btn-cta--secondary {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff !important;
+    border: 2px solid rgba(255,255,255,0.6) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+.s-footer .btn-cta--secondary:hover {
+    background: rgba(255,255,255,0.25) !important;
+    border-color: #fff !important;
+}
+
+/* ss-go-top arrow on footer */
+.s-footer .ss-go-top a svg {
+    fill: #fff !important;
+}
+
+[data-theme="dark"] .s-footer .ss-go-top a svg {
+    fill: #e8f4f4 !important;
 }
