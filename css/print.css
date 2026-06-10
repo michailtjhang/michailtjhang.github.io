@@ -115,21 +115,18 @@
         display: none !important;
     }
 
-    /* Ensure Professional Background title appears in PDF */
-    .s-about p.text-huge-title {
-    display: none !important;
-}
+    /* Override the massive 9.4rem text-huge-title for ALL elements in print */
+    .text-huge-title {
+        display: block !important;
+        font-size: 9.5pt !important;
+        line-height: 1.4 !important;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
+        margin-bottom: 0.5rem !important;
+        color: #111111 !important;
+        text-align: left !important;
+    }
 
-.clients-list li {
-    margin: 0 !important;
-    line-height: 1.2 !important;
-}
-    font-size: 9.5pt !important;
-    line-height: 1.4 !important;
-    margin-bottom: 0.5rem !important;
-    color: #111111 !important;
-    text-align: left !important;
-}
     /* ---------------------------------------------------------------
      * 3. PAGE CONTAINER & SECTIONS
      * --------------------------------------------------------------- */
@@ -408,20 +405,13 @@
     font-size: 9.5pt !important;
     font-weight: 600 !important;
     padding: 0 !important;
-    margin: 0 !important; /* remove spacing */
+    margin: 0 0 0.4rem 0 !important; /* add vertical spacing */
     display: block !important;
-    line-height: 1.2 !important;
+    line-height: 1.4 !important;
     word-wrap: break-word !important;
 }
 
-/* Ensure Professional Background paragraph uses appropriate font size */
-.s-about p.text-huge-title {
-    font-size: 9.5pt !important;
-    line-height: 1.4 !important;
-    margin-bottom: 0.5rem !important;
-    color: #111111 !important;
-    text-align: left !important;
-}
+
 
 .clients-list a {
     display: inline-block !important;
@@ -542,7 +532,7 @@
     }
 
     .folio-item__meta .cat {
-        font-size: 8pt !important;
+        font-size: 7pt !important;
         font-weight: 500 !important;
         color: #666666 !important;
         text-transform: uppercase !important;
@@ -561,16 +551,16 @@
     }
 
     .folio-item__title {
-        font-size: 9.5pt !important;
-        font-weight: 700 !important;
-        margin: 0 0 0.4rem 0 !important;
-    }
+    font-size: 7pt !important;
+    font-weight: 700 !important;
+    margin: 0 0 0.3rem 0 !important;
+}
 
     /* Force project captions and descriptions to be visible in print */
     .folio-item__caption {
         display: block !important;
-        font-size: 8.5pt !important;
-        line-height: 1.4 !important;
+        font-size: 8pt !important;
+        line-height: 1.35 !important;
         margin: 0 !important;
     }
 
