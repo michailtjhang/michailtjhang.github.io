@@ -273,6 +273,21 @@
     };
 
     // ================================================================
+    // PDF EXPORT
+    // ================================================================
+
+    const pdfExport = {
+        init: function () {
+            const exportBtn = document.getElementById('btn-export-pdf');
+            if (exportBtn) {
+                exportBtn.addEventListener('click', () => {
+                    window.print();
+                });
+            }
+        }
+    };
+
+    // ================================================================
     // INITIALIZE ALL MODULES
     // ================================================================
 
@@ -284,6 +299,7 @@
         smoothScroll.init();
         lazyLoading.init();
         particles.init();
+        pdfExport.init();
 
         console.log('✨ Portfolio enhancements loaded successfully!');
     };

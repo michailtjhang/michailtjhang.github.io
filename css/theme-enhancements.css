@@ -1009,3 +1009,55 @@
 [data-theme="dark"] .s-footer .ss-go-top a svg {
     fill: #e8f4f4 !important;
 }
+
+/* ===================================================================
+ * # NAVBAR EXPORT PDF BUTTON
+ * =================================================================== */
+
+.s-header__social {
+    align-items: center !important;
+}
+
+.s-header__social #btn-export-pdf {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 1rem 0 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease !important;
+    outline: none !important;
+    width: 2.8rem !important;
+    height: 2.8rem !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.s-header__social #btn-export-pdf svg {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    stroke: currentColor !important;
+    transition: all 0.3s ease !important;
+}
+
+.s-header__social #btn-export-pdf:hover {
+    color: var(--accent-primary) !important;
+    transform: scale(1.15) !important;
+    background: transparent !important;
+}
+
+@media screen and (max-width: 900px) {
+    .s-header__social {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    .s-header__social #btn-export-pdf {
+        margin: 0 0 0.5rem 0 !important;
+    }
+}

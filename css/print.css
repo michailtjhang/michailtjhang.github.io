@@ -1,0 +1,589 @@
+/* ===================================================================
+ * Portfolio Print Stylesheet
+ * Optimized for exporting the web portfolio as a clean, premium PDF.
+ * Enforces professional, document-style typography and spacing.
+ * =================================================================== */
+
+@media print {
+    /* ---------------------------------------------------------------
+     * 1. GLOBAL RESET, FONTS, COLORS & LAYOUT DEFAULTS
+     * --------------------------------------------------------------- */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        transition: none !important;
+        animation: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Force clean, standard system sans-serif font across all elements */
+    *, 
+    html, 
+    body, 
+    h1, h2, h3, h4, h5, h6, 
+    span, p, a, li, ul, 
+    div,
+    .site-title, 
+    .timeline__title, 
+    .timeline__meta,
+    .timeline__timeframe, 
+    .skill-chip span,
+    .folio-item__title,
+    .folio-item__caption,
+    .folio-item__info {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    }
+
+    /* Force dark color on all texts to prevent white-on-white text in Dark Mode */
+    html, 
+    body, 
+    h1, h2, h3, h4, h5, h6, 
+    span, p, li, ul, 
+    div,
+    .site-title,
+    .site-title a,
+    .timeline__title, 
+    .timeline__meta,
+    .timeline__timeframe, 
+    .skill-chip span,
+    .folio-item__title,
+    .folio-item__caption,
+    .folio-item__caption p {
+        color: #111111 !important;
+    }
+
+    html, body {
+        background: #ffffff !important;
+        font-size: 9pt !important;
+        line-height: 1.4 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 1.2cm 1.2cm;
+    }
+
+    /* Override dynamic fade-in scroll animation opacity to guarantee all text is printed */
+    [data-animate-el],
+    [data-animate-block],
+    .fade-in,
+    .slide-in-left,
+    .slide-in-right {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    /* Spacing reset for headers and blocks */
+    h1, h2, h3, h4, h5, h6, p, ul, li {
+        margin-top: 0 !important;
+        margin-bottom: 0.4rem !important;
+    }
+
+    /* Page-break control */
+    h2, h3, h4, h5, h6 {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+    }
+    
+    img {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* ---------------------------------------------------------------
+     * 2. HIDE INTERACTIVE & NON-PORTFOLIO ELEMENTS
+     * --------------------------------------------------------------- */
+    #preloader,
+    #masthead,
+    .s-header,
+    .theme-toggle-wrapper,
+    .s-header__menu-toggle,
+    .cta-buttons,
+    .project-filters,
+    .ss-go-top,
+    .pswp,
+    #particles-canvas,
+    footer,
+    #colophon,
+    .s-footer {
+        display: none !important;
+    }
+
+    /* Ensure Professional Background title appears in PDF */
+    .s-about p.text-huge-title {
+    display: none !important;
+}
+
+.clients-list li {
+    margin: 0 !important;
+    line-height: 1.2 !important;
+}
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem !important;
+    color: #111111 !important;
+    text-align: left !important;
+}
+    /* ---------------------------------------------------------------
+     * 3. PAGE CONTAINER & SECTIONS
+     * --------------------------------------------------------------- */
+    .s-pagewrap {
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+
+    section {
+        background: #ffffff !important;
+        padding: 0.8rem 0 !important; /* Compact section padding */
+        min-height: auto !important;
+        height: auto !important;
+        display: block !important;
+        page-break-inside: auto !important;
+        break-inside: auto !important;
+    }
+
+    .row {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .column {
+        width: 100% !important;
+        float: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    /* ---------------------------------------------------------------
+     * 4. INTRO SECTION (HEADER OF PORTFOLIO)
+     * --------------------------------------------------------------- */
+    .s-intro {
+        padding-top: 0 !important;
+        padding-bottom: 0.6rem !important;
+        min-height: auto !important;
+        border-bottom: 2px solid #5F9295 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .s-intro .row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 2rem !important;
+    }
+
+    .s-intro__content {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    .s-intro__text {
+        width: 75% !important;
+        text-align: left !important;
+    }
+
+    .s-intro__text-huge {
+        font-size: 22pt !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.3rem !important;
+        line-height: 1.1 !important;
+        background: none !important;
+        -webkit-text-fill-color: initial !important;
+        font-weight: 700 !important;
+    }
+
+    .typing-text {
+        font-size: 11pt !important;
+        color: #5F9295 !important;
+        font-weight: 600 !important;
+        border-right: none !important;
+        white-space: normal !important;
+        margin-bottom: 0 !important;
+        animation: none !important;
+    }
+
+    .s-intro__bg {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 50% !important;
+        border: 3px solid #5F9295 !important;
+        box-shadow: none !important;
+        background-color: #f0f0f0 !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* ---------------------------------------------------------------
+     * 5. ABOUT SECTION & TIMELINES
+     * --------------------------------------------------------------- */
+    .s-about {
+        padding-top: 0.5rem !important;
+    }
+
+    .text-pretitle {
+        font-size: 9.5pt !important;
+        font-weight: 700 !important;
+        color: #5F9295 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        margin-bottom: 0.6rem !important;
+        border-bottom: 1px solid #eeeeee !important;
+        padding-bottom: 0.2rem !important;
+    }
+
+    .attention-getter {
+        font-size: 9pt !important;
+        line-height: 1.45 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .s-about__timeline {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 2rem !important;
+        margin-top: 1rem !important;
+        page-break-inside: auto !important;
+        break-inside: auto !important;
+    }
+
+    .s-about__timeline-section {
+        flex: 1 1 0% !important;
+        width: auto !important;
+        max-width: 50% !important;
+        position: relative !important;
+    }
+
+    .s-about__timeline-section::before {
+        display: none !important;
+    }
+
+    .s-about .text-subtitle {
+        font-size: 11pt !important;
+        font-weight: 700 !important;
+        border-bottom: 2px solid #5F9295 !important;
+        padding-bottom: 0.2rem !important;
+        padding-left: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .s-about .text-subtitle::before {
+        display: none !important;
+    }
+
+    .timeline {
+        margin-top: 0.8rem !important;
+        padding: 0 !important;
+    }
+
+    .timeline__block {
+        border-left: 2px solid #5F9295 !important;
+        padding-left: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .timeline__bullet {
+        display: none !important;
+    }
+
+    .timeline__title {
+        font-size: 9.5pt !important;
+        font-weight: 700 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.15rem !important;
+    }
+
+    .timeline__meta {
+        font-size: 9pt !important;
+        margin-bottom: 0.15rem !important;
+        font-weight: 600 !important;
+    }
+
+    .timeline__timeframe {
+        font-size: 8pt !important;
+        font-weight: 500 !important;
+        margin-bottom: 0.3rem !important;
+        letter-spacing: 0.03em !important;
+    }
+
+    .timeline__desc ul {
+        margin: 0 !important;
+        padding-left: 1rem !important;
+    }
+
+    .timeline__desc li {
+        font-size: 8.5pt !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* ---------------------------------------------------------------
+     * 6. TECHNICAL SKILLS & EXPERTISE
+     * --------------------------------------------------------------- */
+    .s-about__skills {
+        padding-top: 0.8rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .skills-category {
+        margin-bottom: 1.2rem !important;
+    }
+
+    .skills-category h4 {
+        font-size: 9.5pt !important;
+        font-weight: 700 !important;
+        color: #5F9295 !important;
+        border-left: 3px solid #5F9295 !important;
+        padding-left: 0.5rem !important;
+        margin-bottom: 0.6rem !important;
+    }
+
+    .skills-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+
+    .skill-chip {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 0.4rem !important;
+        padding: 0.3rem 0.6rem !important;
+        border: 1px solid #e2e8f0 !important;
+        background: #f8fafc !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .skill-chip i {
+        font-size: 10pt !important;
+        margin-bottom: 0 !important;
+        color: #5F9295 !important;
+    }
+
+    .skill-chip span {
+        font-size: 8pt !important;
+        font-weight: 600 !important;
+    }
+
+    /* Trusted Partners List */
+    .s-about__clients {
+        padding-top: 0.8rem !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .clients-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 1.2rem !important;
+        list-style: none !important;
+        margin: 0.6rem 0 0 0 !important;
+        padding: 0 !important;
+    }
+
+    .clients-list li {
+    font-size: 9.5pt !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+    margin: 0 !important; /* remove spacing */
+    display: block !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word !important;
+}
+
+/* Ensure Professional Background paragraph uses appropriate font size */
+.s-about p.text-huge-title {
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem !important;
+    color: #111111 !important;
+    text-align: left !important;
+}
+
+.clients-list a {
+    display: inline-block !important;
+    position: static !important;
+    line-height: 1.5 !important;
+    text-decoration: none !important;
+    border: none !important;
+    color: #111111 !important;
+}
+
+    /* Print adjustments for Trusted Partners */
+    .clients-list {
+        display: block !important;
+    }
+    .clients-list a {
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+
+    /* Disable URL suffixes printing on Trusted Partners to avoid text overlaps */
+    .clients-list a::after {
+        content: "" !important;
+        display: none !important;
+    }
+
+    /* ---------------------------------------------------------------
+     * 7. FEATURED PROJECTS SECTION
+     * --------------------------------------------------------------- */
+    .s-works {
+        padding-top: 1rem !important;
+        /* Force Featured Projects to start on a new page to eliminate huge bottom space on Page 1 */
+        page-break-before: always !important;
+        break-before: always !important;
+    }
+
+    .folio-list {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .folio-list .column {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .folio-item {
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 6px !important;
+        overflow: hidden !important;
+        background: #ffffff !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .folio-item__thumb {
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .folio-item__thumb img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        aspect-ratio: 16 / 9 !important;
+        opacity: 1 !important;
+    }
+
+    /* Show tech stack tags beneath thumbnail */
+    .tech-stack {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.25rem !important;
+        padding: 0.6rem 0.8rem 0 0.8rem !important;
+        position: static !important;
+        opacity: 1 !important;
+        transform: none !important;
+        background: none !important;
+    }
+
+    .tech-badge {
+        font-size: 7.5pt !important;
+        font-weight: 600 !important;
+        color: #5F9295 !important;
+        background: #f0fdf4 !important;
+        border: 1px solid #dcfce7 !important;
+        padding: 0.1rem 0.4rem !important;
+        border-radius: 3px !important;
+    }
+
+    .folio-item__info {
+        padding: 0.8rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+    }
+
+    .folio-item__meta {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .folio-item__meta .cat {
+        font-size: 8pt !important;
+        font-weight: 500 !important;
+        color: #666666 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.03em !important;
+    }
+
+    .project-link {
+        font-size: 8pt !important;
+        font-weight: 600 !important;
+        color: #5F9295 !important;
+        text-decoration: none !important;
+    }
+
+    .project-link::after {
+        content: " ↗" !important;
+    }
+
+    .folio-item__title {
+        font-size: 9.5pt !important;
+        font-weight: 700 !important;
+        margin: 0 0 0.4rem 0 !important;
+    }
+
+    /* Force project captions and descriptions to be visible in print */
+    .folio-item__caption {
+        display: block !important;
+        font-size: 8.5pt !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+    }
+
+    /* Print actual href URLs in parentheses after links */
+    a[href]:not([href^="#"]):not([href^="javascript:"]):not(.clients-list a):after {
+        content: " (" attr(href) ")" !important;
+        font-size: 7.5pt !important;
+        color: #666666 !important;
+        font-weight: normal !important;
+    }
+
+    /* Clean up email and phone links formatting */
+    a[href^="mailto:"]:after {
+        content: "" !important;
+    }
+}
