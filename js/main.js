@@ -60,11 +60,22 @@
 
         html.classList.add('ss-preload');
         
-        window.addEventListener('load', function() {
+        let loaded = false;
+        const removePreloader = function() {
+            if (loaded) return;
+            loaded = true;
             html.classList.remove('ss-preload');
             html.classList.add('ss-loaded');
             tl.play();
-        });
+        };
+
+        if (document.readyState === 'complete') {
+            removePreloader();
+        } else {
+            window.addEventListener('load', removePreloader);
+            // Fallback timeout if window load event already passed or external resource hangs
+            setTimeout(removePreloader, 1500);
+        }
 
     }; // end ssPreloader
 

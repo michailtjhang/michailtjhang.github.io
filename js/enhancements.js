@@ -281,7 +281,9 @@
             const exportBtn = document.getElementById('btn-export-pdf');
             if (exportBtn) {
                 exportBtn.addEventListener('click', () => {
-                    window.print();
+                    // Opens the dedicated portfolio PDF page in a new tab.
+                    // From there, use Ctrl+P / Cmd+P to Save as PDF.
+                    window.open('portfolio-pdf.html', '_blank');
                 });
             }
         }
