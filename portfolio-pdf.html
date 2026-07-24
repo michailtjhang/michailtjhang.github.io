@@ -46,12 +46,12 @@
         ============================================================ */
         @media print {
             html, body {
-                width: 210mm !important;
-                height: 297mm !important;
+                width: 100% !important;
+                height: auto !important;
                 background: white !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                overflow: hidden !important;
+                overflow: visible !important;
             }
             .no-print { display: none !important; }
             .pages-wrapper {
@@ -61,26 +61,21 @@
                 display: block !important;
             }
             .pdf-page {
-                width: 210mm !important;
-                height: 297mm !important;
-                max-height: 297mm !important;
+                width: 100% !important;
+                max-width: 210mm !important;
+                height: auto !important;
+                max-height: none !important;
                 box-sizing: border-box !important;
-                margin: 0 !important;
+                margin: 0 auto !important;
                 padding: 0 !important;
                 box-shadow: none !important;
                 border-radius: 0 !important;
                 border: none !important;
                 overflow: hidden !important;
-                page-break-before: always !important;
                 page-break-after: always !important;
-                break-before: page !important;
                 break-after: page !important;
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
-            }
-            .pdf-page:first-child {
-                page-break-before: avoid !important;
-                break-before: avoid !important;
             }
             .pdf-page:last-child {
                 page-break-after: avoid !important;
@@ -422,8 +417,6 @@
            PROJECT PAGES
         ============================================================ */
         .project-page {
-            height: 297mm;
-            max-height: 297mm;
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -431,19 +424,19 @@
         /* Project header bar */
         .project-header {
             background: linear-gradient(135deg, #0f172a 0%, #1a2744 100%);
-            padding: 16px 36px;
+            padding: 10px 30px;
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
         }
         .project-number {
-            font-size: 26pt;
+            font-size: 22pt;
             font-weight: 900;
             color: var(--accent);
             opacity: 0.25;
             line-height: 1;
             flex-shrink: 0;
-            width: 44px;
+            width: 38px;
             letter-spacing: -2px;
         }
         .project-header-info { flex: 1; min-width: 0; }
@@ -451,35 +444,35 @@
             display: inline-block;
             background: var(--accent);
             color: white;
-            padding: 2px 9px;
+            padding: 1.5px 8px;
             border-radius: 20px;
-            font-size: 6pt;
+            font-size: 5.5pt;
             font-weight: 700;
             letter-spacing: 0.8px;
             text-transform: uppercase;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
         .project-title {
-            font-size: 15pt;
+            font-size: 13.5pt;
             font-weight: 800;
             color: white;
             line-height: 1.1;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
             letter-spacing: -0.5px;
         }
         .project-subtitle {
-            font-size: 8pt;
+            font-size: 7.5pt;
             color: #94a3b8;
             font-weight: 400;
         }
         .project-url-pill {
             flex-shrink: 0;
             color: var(--accent);
-            font-size: 7.5pt;
+            font-size: 7pt;
             font-weight: 600;
             background: rgba(20,184,166,0.1);
             border: 1px solid rgba(20,184,166,0.3);
-            padding: 4px 11px;
+            padding: 3px 9px;
             border-radius: 20px;
             white-space: nowrap;
         }
@@ -487,19 +480,19 @@
         /* Project body */
         .project-body {
             flex: 1;
-            padding: 14px 36px 10px;
+            padding: 8px 30px 6px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 6px;
             min-height: 0;
         }
 
         /* Screenshot Browser Mockup Frame */
         .project-screenshot {
-            border-radius: 6px;
+            border-radius: 5px;
             overflow: hidden;
             border: 1px solid #334155;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             background: #0f172a;
             position: relative;
             width: 100%;
@@ -507,15 +500,15 @@
         }
         .browser-bar {
             background: #1e293b;
-            padding: 5px 10px;
+            padding: 4px 8px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             border-bottom: 1px solid #334155;
         }
         .browser-dot {
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             display: inline-block;
         }
@@ -524,14 +517,14 @@
         .browser-dot.green { background: #10b981; }
         .browser-url-text {
             margin-left: 6px;
-            font-size: 6pt;
+            font-size: 5.5pt;
             color: #94a3b8;
             background: #0f172a;
-            padding: 1.5px 8px;
-            border-radius: 4px;
+            padding: 1px 6px;
+            border-radius: 3px;
             border: 1px solid #334155;
             flex: 1;
-            max-width: 260px;
+            max-width: 240px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -539,7 +532,7 @@
         }
         .browser-img-wrap {
             width: 100%;
-            height: 145px;
+            height: 110px;
             overflow: hidden;
             background: #0f172a;
             display: flex;
@@ -558,10 +551,10 @@
             position: absolute;
             bottom: 0; left: 0; right: 0;
             background: linear-gradient(transparent, rgba(15,23,42,0.85));
-            padding: 6px 10px 4px;
+            padding: 4px 8px 3px;
         }
         .screenshot-caption {
-            font-size: 6.5pt;
+            font-size: 6pt;
             color: rgba(255,255,255,0.9);
             font-weight: 500;
             font-style: italic;
@@ -570,37 +563,37 @@
         /* Extra images under Project Overview */
         .extra-images-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-            gap: 6px;
-            margin-top: 4px;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            gap: 5px;
+            margin-top: 3px;
         }
         .extra-img-card {
-            border-radius: 5px;
+            border-radius: 4px;
             overflow: hidden;
             border: 1px solid var(--border);
             background: #0f172a;
         }
         .extra-img-card img {
             width: 100%;
-            height: 55px;
+            height: 40px;
             object-fit: cover;
             object-position: top center;
             display: block;
         }
         .extra-img-caption {
             display: block;
-            padding: 3px 5px;
-            font-size: 6pt;
+            padding: 2px 4px;
+            font-size: 5.5pt;
             color: var(--text-muted);
-            line-height: 1.2;
+            line-height: 1.15;
             font-weight: 500;
         }
 
         /* Content row: left col + right col */
         .project-content-row {
             display: grid;
-            grid-template-columns: 1fr 1.25fr;
-            gap: 16px;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 12px;
             flex: 1;
             min-height: 0;
         }
