@@ -46,12 +46,12 @@
         ============================================================ */
         @media print {
             html, body {
-                width: 100% !important;
-                height: auto !important;
+                width: 210mm !important;
+                height: 297mm !important;
                 background: white !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                overflow: visible !important;
+                overflow: hidden !important;
             }
             .no-print { display: none !important; }
             .pages-wrapper {
@@ -61,17 +61,19 @@
                 display: block !important;
             }
             .pdf-page {
-                width: 100% !important;
-                max-width: 210mm !important;
-                height: auto !important;
-                max-height: none !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                max-height: 297mm !important;
                 box-sizing: border-box !important;
-                margin: 0 auto !important;
+                margin: 0 !important;
                 padding: 0 !important;
                 box-shadow: none !important;
                 border-radius: 0 !important;
                 border: none !important;
                 overflow: hidden !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
                 page-break-after: always !important;
                 break-after: page !important;
                 page-break-inside: avoid !important;
@@ -186,6 +188,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             box-sizing: border-box;
         }
 
@@ -480,19 +483,20 @@
         /* Project body */
         .project-body {
             flex: 1;
-            padding: 8px 30px 6px;
+            padding: 14px 36px 10px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            justify-content: space-between;
+            gap: 10px;
             min-height: 0;
         }
 
         /* Screenshot Browser Mockup Frame */
         .project-screenshot {
-            border-radius: 5px;
+            border-radius: 6px;
             overflow: hidden;
             border: 1px solid #334155;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
             background: #0f172a;
             position: relative;
             width: 100%;
@@ -532,7 +536,7 @@
         }
         .browser-img-wrap {
             width: 100%;
-            height: 110px;
+            height: 130px;
             overflow: hidden;
             background: #0f172a;
             display: flex;
